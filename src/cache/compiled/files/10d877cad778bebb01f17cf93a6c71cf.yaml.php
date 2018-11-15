@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/var/www/grav-admin/system/blueprints/user/account.yaml',
-    'modified' => 1486891478,
+    'modified' => 1542321496,
     'data' => [
         'title' => 'Account',
         'form' => [
@@ -11,6 +11,13 @@ return [
                 'info' => [
                     'type' => 'userinfo',
                     'size' => 'large'
+                ],
+                'avatar' => [
+                    'type' => 'file',
+                    'size' => 'large',
+                    'destination' => 'user://accounts/avatars',
+                    'multiple' => false,
+                    'random_name' => true
                 ],
                 'content' => [
                     'type' => 'section',
@@ -38,10 +45,11 @@ return [
                     'type' => 'password',
                     'size' => 'large',
                     'label' => 'PLUGIN_ADMIN.PASSWORD',
+                    'autocomplete' => 'new-password',
                     'validate' => [
                         'required' => false,
                         'message' => 'PLUGIN_ADMIN.PASSWORD_VALIDATION_MESSAGE',
-                        'pattern' => '(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{8,}'
+                        'config-pattern@' => 'system.pwd_regex'
                     ]
                 ],
                 'fullname' => [
@@ -66,6 +74,38 @@ return [
                     'default' => 'en',
                     'help' => 'PLUGIN_ADMIN.LANGUAGE_HELP'
                 ],
+                'twofa_check' => [
+                    'type' => 'conditional',
+                    'condition' => 'config.plugins.admin.twofa_enabled',
+                    'fields' => [
+                        'twofa' => [
+                            'title' => 'PLUGIN_ADMIN.2FA_TITLE',
+                            'type' => 'section',
+                            'underline' => true
+                        ],
+                        'twofa_enabled' => [
+                            'type' => 'toggle',
+                            'label' => 'PLUGIN_ADMIN.2FA_ENABLED',
+                            'classes' => 'twofa-toggle',
+                            'highlight' => 1,
+                            'default' => 0,
+                            'options' => [
+                                1 => 'PLUGIN_ADMIN.YES',
+                                0 => 'PLUGIN_ADMIN.NO'
+                            ],
+                            'validate' => [
+                                'type' => 'bool'
+                            ]
+                        ],
+                        'twofa_secret' => [
+                            'type' => '2fa_secret',
+                            'outerclasses' => 'twofa-secret',
+                            'markdown' => true,
+                            'label' => 'PLUGIN_ADMIN.2FA_SECRET',
+                            'sublabel' => 'PLUGIN_ADMIN.2FA_SECRET_HELP'
+                        ]
+                    ]
+                ],
                 'security' => [
                     'title' => 'PLUGIN_ADMIN.ACCESS_LEVELS',
                     'type' => 'section',
@@ -73,10 +113,11 @@ return [
                     'underline' => true,
                     'fields' => [
                         'groups' => [
-                            'type' => 'selectize',
+                            'type' => 'select',
+                            'multiple' => true,
                             'size' => 'large',
                             'label' => 'PLUGIN_ADMIN.GROUPS',
-                            'data-options@' => '\\Grav\\User\\Groups::groups',
+                            'data-options@' => '\\Grav\\Common\\User\\Group::groupNames',
                             'classes' => 'fancy',
                             'help' => 'PLUGIN_ADMIN.GROUPS_HELP',
                             'validate' => [

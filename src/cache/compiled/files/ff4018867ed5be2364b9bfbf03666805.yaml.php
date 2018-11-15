@@ -2,13 +2,13 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/var/www/grav-admin/system/config/site.yaml',
-    'modified' => 1486891478,
+    'modified' => 1542321495,
     'data' => [
         'title' => 'Grav',
         'default_lang' => 'en',
         'author' => [
             'name' => 'John Appleseed',
-            'email' => 'john@email.com'
+            'email' => 'john@example.com'
         ],
         'taxonomies' => [
             0 => 'category',

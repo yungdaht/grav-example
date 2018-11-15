@@ -1,134 +1,134 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledLanguages',
-    'timestamp' => 1542316683,
-    'checksum' => '2be1e9fdaa1a05d1458d7e1cfd01324c',
+    'timestamp' => 1542321529,
+    'checksum' => '16fac23f4c97cea74b1d1e363595d7c6',
     'files' => [
         'system/languages' => [
             'ar' => [
                 'file' => 'system/languages/ar.yaml',
-                'modified' => 1486891478
+                'modified' => 1542321496
             ],
             'ca' => [
                 'file' => 'system/languages/ca.yaml',
-                'modified' => 1486891478
+                'modified' => 1542321496
             ],
             'cs' => [
                 'file' => 'system/languages/cs.yaml',
-                'modified' => 1486891478
+                'modified' => 1542321496
             ],
             'da' => [
                 'file' => 'system/languages/da.yaml',
-                'modified' => 1486891478
+                'modified' => 1542321496
             ],
             'de' => [
                 'file' => 'system/languages/de.yaml',
-                'modified' => 1486891478
+                'modified' => 1542321496
             ],
             'el' => [
                 'file' => 'system/languages/el.yaml',
-                'modified' => 1486891478
+                'modified' => 1542321496
             ],
             'en' => [
                 'file' => 'system/languages/en.yaml',
-                'modified' => 1486891478
+                'modified' => 1542321496
             ],
             'es' => [
                 'file' => 'system/languages/es.yaml',
-                'modified' => 1486891478
+                'modified' => 1542321496
             ],
             'fi' => [
                 'file' => 'system/languages/fi.yaml',
-                'modified' => 1486891478
+                'modified' => 1542321496
             ],
             'fr' => [
                 'file' => 'system/languages/fr.yaml',
-                'modified' => 1486891478
+                'modified' => 1542321496
             ],
             'hr' => [
                 'file' => 'system/languages/hr.yaml',
-                'modified' => 1486891478
+                'modified' => 1542321496
             ],
             'hu' => [
                 'file' => 'system/languages/hu.yaml',
-                'modified' => 1486891478
+                'modified' => 1542321496
             ],
             'it' => [
                 'file' => 'system/languages/it.yaml',
-                'modified' => 1486891478
+                'modified' => 1542321496
             ],
             'ja' => [
                 'file' => 'system/languages/ja.yaml',
-                'modified' => 1486891478
+                'modified' => 1542321496
             ],
             'lt' => [
                 'file' => 'system/languages/lt.yaml',
-                'modified' => 1486891478
+                'modified' => 1542321496
             ],
             'nb' => [
                 'file' => 'system/languages/nb.yaml',
-                'modified' => 1486891478
+                'modified' => 1542321496
             ],
             'nl' => [
                 'file' => 'system/languages/nl.yaml',
-                'modified' => 1486891478
+                'modified' => 1542321496
             ],
             'no' => [
                 'file' => 'system/languages/no.yaml',
-                'modified' => 1486891478
+                'modified' => 1542321496
             ],
             'pl' => [
                 'file' => 'system/languages/pl.yaml',
-                'modified' => 1486891478
+                'modified' => 1542321496
             ],
             'pt' => [
                 'file' => 'system/languages/pt.yaml',
-                'modified' => 1486891478
+                'modified' => 1542321496
             ],
             'ro' => [
                 'file' => 'system/languages/ro.yaml',
-                'modified' => 1486891478
+                'modified' => 1542321496
             ],
             'ru' => [
                 'file' => 'system/languages/ru.yaml',
-                'modified' => 1486891478
+                'modified' => 1542321496
             ],
             'sk' => [
                 'file' => 'system/languages/sk.yaml',
-                'modified' => 1486891478
+                'modified' => 1542321496
             ],
             'sv' => [
                 'file' => 'system/languages/sv.yaml',
-                'modified' => 1486891478
+                'modified' => 1542321496
             ],
             'th' => [
                 'file' => 'system/languages/th.yaml',
-                'modified' => 1486891478
+                'modified' => 1542321496
             ],
             'tr' => [
                 'file' => 'system/languages/tr.yaml',
-                'modified' => 1486891478
+                'modified' => 1542321496
             ],
             'uk' => [
                 'file' => 'system/languages/uk.yaml',
-                'modified' => 1486891478
+                'modified' => 1542321496
             ],
             'vi' => [
                 'file' => 'system/languages/vi.yaml',
-                'modified' => 1486891478
+                'modified' => 1542321496
             ]
         ],
         'user/plugins' => [
-            'plugins/form' => [
-                'file' => 'user/plugins/form/languages.yaml',
+            'plugins/email' => [
+                'file' => 'user/plugins/email/languages.yaml',
                 'modified' => 1486891478
             ],
             'plugins/error' => [
                 'file' => 'user/plugins/error/languages.yaml',
                 'modified' => 1486891478
             ],
-            'plugins/email' => [
-                'file' => 'user/plugins/email/languages.yaml',
+            'plugins/form' => [
+                'file' => 'user/plugins/form/languages.yaml',
                 'modified' => 1486891478
             ],
             'plugins/login' => [
@@ -175,7 +175,7 @@ return [
             ],
             'en' => [
                 'file' => 'user/plugins/admin/languages/en.yaml',
-                'modified' => 1486891478
+                'modified' => 1542321523
             ],
             'es' => [
                 'file' => 'user/plugins/admin/languages/es.yaml',
@@ -3323,13 +3323,13 @@ Ruta: `%2$s`
                 'NON_ROUTABLE' => 'Ikke tilgængelig',
                 'NON_MODULAR' => 'Ikke modulær'
             ],
-            'PLUGIN_ERROR' => [
-                'ERROR' => 'Fejl',
-                'ERROR_MESSAGE' => 'Ups. Det ser ud til at siden ikke eksisterer.'
-            ],
             'PLUGIN_EMAIL' => [
                 'PLEASE_CONFIGURE_A_TO_ADDRESS' => 'Konfigurere venligst en \'til\' email adresse i Email Plugin indstillingerne eller her i formularen',
                 'PLEASE_CONFIGURE_A_FROM_ADDRESS' => 'Konfigurere venligst en \'fra\' email adresse i Email Plugin indstillingerne eller her i formularen'
+            ],
+            'PLUGIN_ERROR' => [
+                'ERROR' => 'Fejl',
+                'ERROR_MESSAGE' => 'Ups. Det ser ud til at siden ikke eksisterer.'
             ],
             'FRONTMATTER_ERROR_PAGE' => '---
 Titel: %1$s
@@ -4031,6 +4031,15 @@ Sti: `%2$s`
                 'ERROR_SIMPLE' => 'Einfacher Fehler',
                 'ERROR_SYSTEM' => 'Systemfehler'
             ],
+            'PLUGIN_EMAIL' => [
+                'EMAIL_NOT_CONFIGURED' => 'E-Mail ist nicht konfiguriert',
+                'PLEASE_CONFIGURE_A_TO_ADDRESS' => 'Bitte konfigurieren sie eine \'An\' (\'to\') Adresse in den Email-Plugin-Einstellungen oder im Formular.',
+                'PLEASE_CONFIGURE_A_FROM_ADDRESS' => 'Bitte konfigurieren sie eine \'Von\' (\'from\') Adresse in den Email-Plugin-Einstellungen oder im Formular.'
+            ],
+            'PLUGIN_ERROR' => [
+                'ERROR' => 'Fehler',
+                'ERROR_MESSAGE' => 'Uuups. Sieht aus als ob diese Seite nicht existiert.'
+            ],
             'PLUGIN_FORM' => [
                 'NOT_VALIDATED' => 'Formularwerte nicht gültig. Für ein oder mehrere erforderliche Felder fehlen Werte.',
                 'NONCE_NOT_VALIDATED' => 'Ups, es gibt da ein Problem. Eingabewerte bitte noch mal prüfen und das Formular erneut absenden.',
@@ -4042,15 +4051,6 @@ Sti: `%2$s`
                 'ACCEPT' => 'Erlaube MIME-Typen',
                 'ACCEPT_HELP' => 'Eine Liste von MIME-Typen, die hochgeladen werden dürfen.',
                 'ERROR_VALIDATING_CAPTCHA' => 'Die Überprüfung des Captcha ist fehlgeschlagen.'
-            ],
-            'PLUGIN_ERROR' => [
-                'ERROR' => 'Fehler',
-                'ERROR_MESSAGE' => 'Uuups. Sieht aus als ob diese Seite nicht existiert.'
-            ],
-            'PLUGIN_EMAIL' => [
-                'EMAIL_NOT_CONFIGURED' => 'E-Mail ist nicht konfiguriert',
-                'PLEASE_CONFIGURE_A_TO_ADDRESS' => 'Bitte konfigurieren sie eine \'An\' (\'to\') Adresse in den Email-Plugin-Einstellungen oder im Formular.',
-                'PLEASE_CONFIGURE_A_FROM_ADDRESS' => 'Bitte konfigurieren sie eine \'Von\' (\'from\') Adresse in den Email-Plugin-Einstellungen oder im Formular.'
             ],
             'PLUGIN_LOGIN' => [
                 'USERNAME' => 'Benutzername',
@@ -4592,7 +4592,7 @@ Pfad: `%2$s`
                 'FORGOT_EMAIL_NOT_CONFIGURED' => 'Cannot reset password. This site is not configured to send emails',
                 'FORGOT_EMAIL_SUBJECT' => '%s Password Reset Request',
                 'FORGOT_EMAIL_BODY' => '<h1>Password Reset</h1><p>Dear %1$s,</p><p>A request was made on <b>%4$s</b> to reset your password.</p><p><br /><a href="%2$s" class="btn-primary">Click this to reset your password</a><br /><br /></p><p>Alternatively, copy the following URL into your browser\'s address bar:</p> <p>%2$s</p><p><br />Kind regards,<br /><br />%3$s</p>',
-                'MANAGE_PAGES' => 'Manage Pages',
+                'MANAGE_PAGES' => 'Manage Pages baby',
                 'CONFIGURATION' => 'Configuration',
                 'PAGES' => 'Pages',
                 'PLUGINS' => 'Plugins',
@@ -5206,6 +5206,17 @@ Pfad: `%2$s`
                 'CLI_COMPATIBILITY' => 'CLI Compatibility',
                 'CLI_COMPATIBILITY_HELP' => 'Ensures that only non-volatile Cache drivers are used (file, redis, memcache, etc.)'
             ],
+            'PLUGIN_EMAIL' => [
+                'EMAIL_NOT_CONFIGURED' => 'Email not configured',
+                'PLEASE_CONFIGURE_A_TO_ADDRESS' => 'Please configure a \'to\' address in the Email Plugin settings, or in the form',
+                'PLEASE_CONFIGURE_A_FROM_ADDRESS' => 'Please configure a \'from\' address in the Email Plugin settings, or in the form',
+                'TEST_EMAIL_BODY' => '<h1>Testing Email</h1><p>This test email has been sent based on the following configuration:</p>  <p><pre>%1$s</pre></p>',
+                'EMAIL_FOOTER' => 'GetGrav.org'
+            ],
+            'PLUGIN_ERROR' => [
+                'ERROR' => 'Error',
+                'ERROR_MESSAGE' => 'Woops. Looks like this page doesn\'t exist.'
+            ],
             'PLUGIN_FORM' => [
                 'NOT_VALIDATED' => 'Form not validated. One or more required fields are missing.',
                 'NONCE_NOT_VALIDATED' => 'Oops there was a problem, please check your input and submit the form again.',
@@ -5240,17 +5251,6 @@ Pfad: `%2$s`
                 'DROPZONE_REMOVE_FILE' => 'Remove file',
                 'DROPZONE_REMOVE_FILE_CONFIRMATION' => 'Are you sure you want to delete this file?',
                 'DROPZONE_RESPONSE_ERROR' => 'Server responded with {{statusCode}} code.'
-            ],
-            'PLUGIN_ERROR' => [
-                'ERROR' => 'Error',
-                'ERROR_MESSAGE' => 'Woops. Looks like this page doesn\'t exist.'
-            ],
-            'PLUGIN_EMAIL' => [
-                'EMAIL_NOT_CONFIGURED' => 'Email not configured',
-                'PLEASE_CONFIGURE_A_TO_ADDRESS' => 'Please configure a \'to\' address in the Email Plugin settings, or in the form',
-                'PLEASE_CONFIGURE_A_FROM_ADDRESS' => 'Please configure a \'from\' address in the Email Plugin settings, or in the form',
-                'TEST_EMAIL_BODY' => '<h1>Testing Email</h1><p>This test email has been sent based on the following configuration:</p>  <p><pre>%1$s</pre></p>',
-                'EMAIL_FOOTER' => 'GetGrav.org'
             ],
             'PLUGIN_LOGIN' => [
                 'USERNAME' => 'Username',
@@ -5429,6 +5429,7 @@ Path: `%2$s`
                 'BAD_DATE' => 'Bad date',
                 'AGO' => 'ago',
                 'FROM_NOW' => 'from now',
+                'JUST_NOW' => 'just now',
                 'SECOND' => 'second',
                 'MINUTE' => 'minute',
                 'HOUR' => 'hour',
@@ -6126,6 +6127,10 @@ Path: `%2$s`
                 'ALLOW_WEBSERVER_GZIP_HELP' => 'Desactivado de forma predeterminada. Cuando esté activado, Webserver-configured compresión Gzip/Deflate funcionará, pero las conexiones http no serán cerradas antes del evento onShutDown() causando una carga más lenta de la página',
                 'OFFLINE_WARNING' => 'No se puede establecer la conexión con GPM'
             ],
+            'PLUGIN_EMAIL' => [
+                'PLEASE_CONFIGURE_A_TO_ADDRESS' => 'Por favor configura una dirección de \'remitente\' en la configuración del Plugin de Email o en el formulario',
+                'PLEASE_CONFIGURE_A_FROM_ADDRESS' => 'Por favor configura una dirección de \'destinatario\' en la configuración del Plugin de Email o en el formulario'
+            ],
             'PLUGIN_FORM' => [
                 'NOT_VALIDATED' => 'Falló la validación del formulario. Uno o más campos obligatorios no fueron cubiertos.',
                 'NONCE_NOT_VALIDATED' => 'Oops, hay un problema, por favor revise la información e intente enviar el formulario otra vez.',
@@ -6142,10 +6147,6 @@ Path: `%2$s`
                 'RECAPTCHA_SITE_KEY_HELP' => 'Para más información visita https://developers.google.com/recaptcha',
                 'RECAPTCHA_SECRET_KEY' => 'Secret key',
                 'RECAPTCHA_SECRET_KEY_HELP' => 'Para más información visita https://developers.google.com/recaptcha'
-            ],
-            'PLUGIN_EMAIL' => [
-                'PLEASE_CONFIGURE_A_TO_ADDRESS' => 'Por favor configura una dirección de \'remitente\' en la configuración del Plugin de Email o en el formulario',
-                'PLEASE_CONFIGURE_A_FROM_ADDRESS' => 'Por favor configura una dirección de \'destinatario\' en la configuración del Plugin de Email o en el formulario'
             ],
             'FRONTMATTER_ERROR_PAGE' => '---
 title: %1$s
@@ -7473,6 +7474,17 @@ Ruta: `%2$s`
                 'NEVER_CACHE_TWIG' => 'Ne jamais mettre en cache Twig',
                 'ALLOW_WEBSERVER_GZIP' => 'Autorisé Gzip WebServer'
             ],
+            'PLUGIN_EMAIL' => [
+                'EMAIL_NOT_CONFIGURED' => 'L’e-mail n’est pas configuré',
+                'PLEASE_CONFIGURE_A_TO_ADDRESS' => 'Veuillez configurer une adresse de \'destinataire\' dans les paramètres du Plugin ou dans le formulaire.',
+                'PLEASE_CONFIGURE_A_FROM_ADDRESS' => 'Veuillez configurer une adresse \'d\'expéditeur\' dans les paramètres du Plugin ou dans le formulaire.',
+                'TEST_EMAIL_BODY' => '<h1>E-mail de test</h1><p>Cet e-mail de test est basé sur la configuration suivante :</p>  <p><pre>%1$s</pre></p>',
+                'EMAIL_FOOTER' => 'GetGrav.org'
+            ],
+            'PLUGIN_ERROR' => [
+                'ERROR' => 'Erreur',
+                'ERROR_MESSAGE' => 'Oups. Il semble que cette page n’existe pas.'
+            ],
             'PLUGIN_FORM' => [
                 'NOT_VALIDATED' => 'Formulaire non validé. Un ou plusieurs champs obligatoires sont manquants.',
                 'NONCE_NOT_VALIDATED' => 'Oups, un problème est survenu. Veuillez vérifier votre saisie et soumettre à nouveau le formulaire.',
@@ -7507,17 +7519,6 @@ Ruta: `%2$s`
                 'DROPZONE_REMOVE_FILE' => 'Supprimer le fichier',
                 'DROPZONE_REMOVE_FILE_CONFIRMATION' => 'Êtes-vous sûr de vouloir supprimer ce fichier ?',
                 'DROPZONE_RESPONSE_ERROR' => 'Le serveur a répondu avec le code {{statusCode}}.'
-            ],
-            'PLUGIN_ERROR' => [
-                'ERROR' => 'Erreur',
-                'ERROR_MESSAGE' => 'Oups. Il semble que cette page n’existe pas.'
-            ],
-            'PLUGIN_EMAIL' => [
-                'EMAIL_NOT_CONFIGURED' => 'L’e-mail n’est pas configuré',
-                'PLEASE_CONFIGURE_A_TO_ADDRESS' => 'Veuillez configurer une adresse de \'destinataire\' dans les paramètres du Plugin ou dans le formulaire.',
-                'PLEASE_CONFIGURE_A_FROM_ADDRESS' => 'Veuillez configurer une adresse \'d\'expéditeur\' dans les paramètres du Plugin ou dans le formulaire.',
-                'TEST_EMAIL_BODY' => '<h1>E-mail de test</h1><p>Cet e-mail de test est basé sur la configuration suivante :</p>  <p><pre>%1$s</pre></p>',
-                'EMAIL_FOOTER' => 'GetGrav.org'
             ],
             'PLUGIN_LOGIN' => [
                 'USERNAME' => 'Nom d’utilisateur',
@@ -8298,6 +8299,15 @@ Path: `%2$s`
                 'ALL' => 'Sve',
                 'FROM' => 'od'
             ],
+            'PLUGIN_EMAIL' => [
+                'EMAIL_NOT_CONFIGURED' => 'Email nije konfiguriran',
+                'PLEASE_CONFIGURE_A_TO_ADDRESS' => 'Konfigurirajte \'za\' (\'to\') adresu u postavkama Email dodatka ili u obrascu',
+                'PLEASE_CONFIGURE_A_FROM_ADDRESS' => 'Konfigurirajte \'od\' (\'from\') adresu u postavkama Email dodatka ili u obrascu'
+            ],
+            'PLUGIN_ERROR' => [
+                'ERROR' => 'Greška',
+                'ERROR_MESSAGE' => 'Uups. Izgleda da ova stranica ne postoji.'
+            ],
             'PLUGIN_FORM' => [
                 'NOT_VALIDATED' => 'Formular nije validiran. Jedan ili više traženih polja nedostaju.',
                 'NONCE_NOT_VALIDATED' => 'Ups, došlo je do problema, molimo provjerite svoj unos i pokušajte opet.',
@@ -8308,15 +8318,6 @@ Path: `%2$s`
                 'ACCEPT' => 'Dopušteni MIME Tipovi',
                 'ACCEPT_HELP' => 'Lista dopuštenih MIME Tipova koji su dozvoljeni za upload',
                 'ERROR_VALIDATING_CAPTCHA' => 'Greška pri validiranju Captcha'
-            ],
-            'PLUGIN_ERROR' => [
-                'ERROR' => 'Greška',
-                'ERROR_MESSAGE' => 'Uups. Izgleda da ova stranica ne postoji.'
-            ],
-            'PLUGIN_EMAIL' => [
-                'EMAIL_NOT_CONFIGURED' => 'Email nije konfiguriran',
-                'PLEASE_CONFIGURE_A_TO_ADDRESS' => 'Konfigurirajte \'za\' (\'to\') adresu u postavkama Email dodatka ili u obrascu',
-                'PLEASE_CONFIGURE_A_FROM_ADDRESS' => 'Konfigurirajte \'od\' (\'from\') adresu u postavkama Email dodatka ili u obrascu'
             ],
             'PLUGIN_LOGIN' => [
                 'ACCESS_DENIED' => 'Pristup odbijen...',
@@ -9866,6 +9867,14 @@ Elérési út: `%2$s`
                 'ALLOW_WEBSERVER_GZIP_HELP' => 'Disattivata per impostazione predefinita. Quando attivata, la compressione configurata Gzip/Deflate WebServer, funzionerà ma la connessione http non verrà chiusa prima dell\'evento onShutDown() rallentando il caricamento della pagina',
                 'OFFLINE_WARNING' => 'Non è possibile stabilire la connessione con il GPM'
             ],
+            'PLUGIN_EMAIL' => [
+                'PLEASE_CONFIGURE_A_TO_ADDRESS' => 'Per favore, configura l\'indirizzo di destinazione (\'to\') nella configurazione del Plugin Email, oppure direttamente nella form.',
+                'PLEASE_CONFIGURE_A_FROM_ADDRESS' => 'Per favore, configura l\'indirizzo di provenienza (\'from\') nella configurazione del Plugin Email, oppure direttamente nella form'
+            ],
+            'PLUGIN_ERROR' => [
+                'ERROR' => 'Errore',
+                'ERROR_MESSAGE' => 'Ooops. A quanto pare, questa pagina non esiste.'
+            ],
             'PLUGIN_FORM' => [
                 'NOT_VALIDATED' => 'Il Form risulta invalido. Uno o più campi risultano omessi.',
                 'NONCE_NOT_VALIDATED' => 'Oops è stato riscontrato un errore, si prega di ricontrollare i dati inseriti e provare di nuovo.',
@@ -9877,14 +9886,6 @@ Elérési út: `%2$s`
                 'ACCEPT' => 'Tipi di MIME Concessi',
                 'ACCEPT_HELP' => 'Una lista di tipi di MIME che sono permessi per l\'upload',
                 'ERROR_VALIDATING_CAPTCHA' => 'Errore durante la validazione del Captcha'
-            ],
-            'PLUGIN_ERROR' => [
-                'ERROR' => 'Errore',
-                'ERROR_MESSAGE' => 'Ooops. A quanto pare, questa pagina non esiste.'
-            ],
-            'PLUGIN_EMAIL' => [
-                'PLEASE_CONFIGURE_A_TO_ADDRESS' => 'Per favore, configura l\'indirizzo di destinazione (\'to\') nella configurazione del Plugin Email, oppure direttamente nella form.',
-                'PLEASE_CONFIGURE_A_FROM_ADDRESS' => 'Per favore, configura l\'indirizzo di provenienza (\'from\') nella configurazione del Plugin Email, oppure direttamente nella form'
             ],
             'FRONTMATTER_ERROR_PAGE' => '---Titolo: %1$s---# Errore: Frontmatter non valido: \'%2$s\' * *%3$s * * \' \'%4$s \' \'',
             'NICETIME' => [
@@ -13727,6 +13728,15 @@ Caminho: `%2$s`
                 'ALLOW_WEBSERVER_GZIP_HELP' => 'Dezactivată în mod implicit. Dacă este activată, compresia Gzip/Defflate configurată pe WebServer va funcționa dar conexiunile Http nu vor fi închise cu evenimentul onShutDown() astfel paginile se vor încarca mai greu',
                 'OFFLINE_WARNING' => 'Conexiunea la GPM nu poate fi stabilită'
             ],
+            'PLUGIN_EMAIL' => [
+                'EMAIL_NOT_CONFIGURED' => 'Adresa de email nu este configurată',
+                'PLEASE_CONFIGURE_A_TO_ADDRESS' => 'Vă rugam setați o adresă \'către\' în setările modulului Email sau în formular',
+                'PLEASE_CONFIGURE_A_FROM_ADDRESS' => 'Vă rugam setați o adresă \'de la\' în setările modulului Email sau în formular'
+            ],
+            'PLUGIN_ERROR' => [
+                'ERROR' => 'Eroare',
+                'ERROR_MESSAGE' => 'Ooops. Se pare că pagina nu există.'
+            ],
             'PLUGIN_FORM' => [
                 'NOT_VALIDATED' => 'Formularul nu a fost validat. Unul sau mai multe câmpuri sunt goale.',
                 'NONCE_NOT_VALIDATED' => 'Oops a apărut o problemă, vă rugăm verificați datele introduse și trimiteți formularul din nou.',
@@ -13745,15 +13755,6 @@ Caminho: `%2$s`
                 'RECAPTCHA_SITE_KEY_HELP' => 'Pentru mai multe detalii vă rugăm vizitați https://developers.google.com/recaptcha',
                 'RECAPTCHA_SECRET_KEY' => 'Cheia secretă pentru Site',
                 'RECAPTCHA_SECRET_KEY_HELP' => 'Pentru mai multe detalii vă rugăm vizitați  https://developers.google.com/recaptcha'
-            ],
-            'PLUGIN_ERROR' => [
-                'ERROR' => 'Eroare',
-                'ERROR_MESSAGE' => 'Ooops. Se pare că pagina nu există.'
-            ],
-            'PLUGIN_EMAIL' => [
-                'EMAIL_NOT_CONFIGURED' => 'Adresa de email nu este configurată',
-                'PLEASE_CONFIGURE_A_TO_ADDRESS' => 'Vă rugam setați o adresă \'către\' în setările modulului Email sau în formular',
-                'PLEASE_CONFIGURE_A_FROM_ADDRESS' => 'Vă rugam setați o adresă \'de la\' în setările modulului Email sau în formular'
             ],
             'PLUGIN_LOGIN' => [
                 'USERNAME' => 'Nume utilizator',
@@ -14564,13 +14565,13 @@ Calea: `%2$s`
                 'ERROR_SYSTEM' => 'Системная ошибка',
                 'OFFLINE_WARNING' => 'Невозможно установить подключение к GPM'
             ],
-            'PLUGIN_ERROR' => [
-                'ERROR' => 'Ошибка',
-                'ERROR_MESSAGE' => 'Упс. Похоже, этой страницы не существует.'
-            ],
             'PLUGIN_EMAIL' => [
                 'PLEASE_CONFIGURE_A_TO_ADDRESS' => 'Пожалуйста настройте адрес получателя (\'to\') в настройках плагина Email Plugin, или на форме',
                 'PLEASE_CONFIGURE_A_FROM_ADDRESS' => 'Пожалуйста настройте адрес отправителя (\'from\') в настройках плагина Email Plugin, или на форме'
+            ],
+            'PLUGIN_ERROR' => [
+                'ERROR' => 'Ошибка',
+                'ERROR_MESSAGE' => 'Упс. Похоже, этой страницы не существует.'
             ],
             'FRONTMATTER_ERROR_PAGE' => '---
 title: %1$s
@@ -17609,6 +17610,7 @@ Path: `%2$s`
                 6 => 'søndag'
             ]
         ],
-        'checksum' => '2be1e9fdaa1a05d1458d7e1cfd01324c'
+        'checksum' => '16fac23f4c97cea74b1d1e363595d7c6',
+        'timestamp' => 1542321529
     ]
 ];

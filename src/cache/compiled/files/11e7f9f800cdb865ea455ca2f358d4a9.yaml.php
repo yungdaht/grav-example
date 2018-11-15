@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/var/www/grav-admin/user/plugins/admin/languages/en.yaml',
-    'modified' => 1486891478,
+    'modified' => 1542321523,
     'data' => [
         'PLUGIN_ADMIN' => [
             'ADMIN_BETA_MSG' => 'This is a Beta release! Use this in production at your own risk...',
@@ -28,7 +28,7 @@ return [
             'FORGOT_EMAIL_NOT_CONFIGURED' => 'Cannot reset password. This site is not configured to send emails',
             'FORGOT_EMAIL_SUBJECT' => '%s Password Reset Request',
             'FORGOT_EMAIL_BODY' => '<h1>Password Reset</h1><p>Dear %1$s,</p><p>A request was made on <b>%4$s</b> to reset your password.</p><p><br /><a href="%2$s" class="btn-primary">Click this to reset your password</a><br /><br /></p><p>Alternatively, copy the following URL into your browser\'s address bar:</p> <p>%2$s</p><p><br />Kind regards,<br /><br />%3$s</p>',
-            'MANAGE_PAGES' => 'Manage Pages',
+            'MANAGE_PAGES' => 'Manage Pages baby',
             'CONFIGURATION' => 'Configuration',
             'PAGES' => 'Pages',
             'PLUGINS' => 'Plugins',

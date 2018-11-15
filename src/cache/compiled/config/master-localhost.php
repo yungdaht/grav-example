@@ -1,8 +1,8 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledConfig',
-    'timestamp' => 1542317089,
-    'checksum' => 'fbe33934361765b8836f98f9efe789d1',
+    'timestamp' => 1542321899,
+    'checksum' => 'e822d080941a870f3c9cb4b9a558ba79',
     'files' => [
         'user/config' => [
             'media' => [
@@ -23,113 +23,68 @@ return [
             ],
             'system' => [
                 'file' => 'user/config/system.yaml',
-                'modified' => 1486891478
+                'modified' => 1542321899
+            ],
+            'themes/agency' => [
+                'file' => 'user/config/themes/agency.yaml',
+                'modified' => 1542321816
             ]
         ],
         'system/config' => [
             'media' => [
                 'file' => 'system/config/media.yaml',
-                'modified' => 1486891478
+                'modified' => 1542321495
+            ],
+            'security' => [
+                'file' => 'system/config/security.yaml',
+                'modified' => 1542321495
             ],
             'site' => [
                 'file' => 'system/config/site.yaml',
-                'modified' => 1486891478
+                'modified' => 1542321495
             ],
             'streams' => [
                 'file' => 'system/config/streams.yaml',
-                'modified' => 1486891478
+                'modified' => 1542321495
             ],
             'system' => [
                 'file' => 'system/config/system.yaml',
-                'modified' => 1486891478
+                'modified' => 1542321495
             ]
         ],
         'user/plugins' => [
-            'plugins/markdown-notices' => [
-                'file' => 'user/plugins/markdown-notices/markdown-notices.yaml',
-                'modified' => 1486891478
-            ],
-            'plugins/form' => [
-                'file' => 'user/plugins/form/form.yaml',
-                'modified' => 1486891478
-            ],
-            'plugins/error' => [
-                'file' => 'user/plugins/error/error.yaml',
+            'plugins/admin' => [
+                'file' => 'user/plugins/admin/admin.yaml',
                 'modified' => 1486891478
             ],
             'plugins/email' => [
                 'file' => 'user/plugins/email/email.yaml',
                 'modified' => 1486891478
             ],
-            'plugins/admin' => [
-                'file' => 'user/plugins/admin/admin.yaml',
+            'plugins/error' => [
+                'file' => 'user/plugins/error/error.yaml',
                 'modified' => 1486891478
             ],
-            'plugins/problems' => [
-                'file' => 'user/plugins/problems/problems.yaml',
+            'plugins/form' => [
+                'file' => 'user/plugins/form/form.yaml',
                 'modified' => 1486891478
             ],
             'plugins/login' => [
                 'file' => 'user/plugins/login/login.yaml',
+                'modified' => 1486891478
+            ],
+            'plugins/markdown-notices' => [
+                'file' => 'user/plugins/markdown-notices/markdown-notices.yaml',
+                'modified' => 1486891478
+            ],
+            'plugins/problems' => [
+                'file' => 'user/plugins/problems/problems.yaml',
                 'modified' => 1486891478
             ]
         ]
     ],
     'data' => [
         'plugins' => [
-            'markdown-notices' => [
-                'enabled' => true,
-                'built_in_css' => true,
-                'level_classes' => [
-                    0 => 'yellow',
-                    1 => 'red',
-                    2 => 'blue',
-                    3 => 'green'
-                ]
-            ],
-            'form' => [
-                'enabled' => true,
-                'built_in_css' => true,
-                'files' => [
-                    'multiple' => false,
-                    'limit' => 10,
-                    'filesize' => 5,
-                    'destination' => 'self@',
-                    'avoid_overwriting' => false,
-                    'random_name' => false,
-                    'accept' => [
-                        0 => 'image/*'
-                    ]
-                ]
-            ],
-            'error' => [
-                'enabled' => true,
-                'routes' => [
-                    404 => '/error'
-                ]
-            ],
-            'email' => [
-                'enabled' => true,
-                'from' => NULL,
-                'from_name' => NULL,
-                'to' => NULL,
-                'to_name' => NULL,
-                'mailer' => [
-                    'engine' => 'mail',
-                    'smtp' => [
-                        'server' => 'localhost',
-                        'port' => 25,
-                        'encryption' => 'none',
-                        'user' => '',
-                        'password' => ''
-                    ],
-                    'sendmail' => [
-                        'bin' => '/usr/sbin/sendmail'
-                    ]
-                ],
-                'content_type' => 'text/html',
-                'debug' => false
-            ],
             'admin' => [
                 'enabled' => true,
                 'route' => '/admin',
@@ -181,9 +136,48 @@ return [
                     ]
                 ]
             ],
-            'problems' => [
+            'email' => [
                 'enabled' => true,
-                'built_in_css' => true
+                'from' => NULL,
+                'from_name' => NULL,
+                'to' => NULL,
+                'to_name' => NULL,
+                'mailer' => [
+                    'engine' => 'mail',
+                    'smtp' => [
+                        'server' => 'localhost',
+                        'port' => 25,
+                        'encryption' => 'none',
+                        'user' => '',
+                        'password' => ''
+                    ],
+                    'sendmail' => [
+                        'bin' => '/usr/sbin/sendmail'
+                    ]
+                ],
+                'content_type' => 'text/html',
+                'debug' => false
+            ],
+            'error' => [
+                'enabled' => true,
+                'routes' => [
+                    404 => '/error'
+                ]
+            ],
+            'form' => [
+                'enabled' => true,
+                'built_in_css' => true,
+                'files' => [
+                    'multiple' => false,
+                    'limit' => 10,
+                    'filesize' => 5,
+                    'destination' => 'self@',
+                    'avoid_overwriting' => false,
+                    'random_name' => false,
+                    'accept' => [
+                        0 => 'image/*'
+                    ]
+                ]
             ],
             'login' => [
                 'enabled' => true,
@@ -224,6 +218,20 @@ return [
                     'timeout' => 604800,
                     'name' => 'grav-rememberme'
                 ]
+            ],
+            'markdown-notices' => [
+                'enabled' => true,
+                'built_in_css' => true,
+                'level_classes' => [
+                    0 => 'yellow',
+                    1 => 'red',
+                    2 => 'blue',
+                    3 => 'green'
+                ]
+            ],
+            'problems' => [
+                'enabled' => true,
+                'built_in_css' => true
             ]
         ],
         'media' => [
@@ -252,7 +260,7 @@ return [
                 ],
                 'jpeg' => [
                     'type' => 'image',
-                    'thumb' => 'media/thumb-jpeg.png',
+                    'thumb' => 'media/thumb-jpg.png',
                     'mime' => 'image/jpeg'
                 ],
                 'png' => [
@@ -267,7 +275,7 @@ return [
                 ],
                 'svg' => [
                     'type' => 'vector',
-                    'thumb' => 'media/thumb.png',
+                    'thumb' => 'media/thumb-svg.png',
                     'mime' => 'image/svg+xml'
                 ],
                 'mp4' => [
@@ -297,7 +305,7 @@ return [
                 ],
                 'webm' => [
                     'type' => 'video',
-                    'thumb' => 'media/thumb.png',
+                    'thumb' => 'media/thumb-webm.png',
                     'mime' => 'video/webm'
                 ],
                 'ogv' => [
@@ -332,10 +340,12 @@ return [
                 ],
                 'aiff' => [
                     'type' => 'audio',
+                    'thumb' => 'media/thumb-aif.png',
                     'mime' => 'audio/aiff'
                 ],
                 'aif' => [
                     'type' => 'audio',
+                    'thumb' => 'media/thumb-aif.png',
                     'mime' => 'audio/aif'
                 ],
                 'txt' => [
@@ -355,82 +365,72 @@ return [
                 ],
                 'docx' => [
                     'type' => 'file',
+                    'thumb' => 'media/thumb-docx.png',
                     'mime' => 'application/msword'
                 ],
                 'xls' => [
                     'type' => 'file',
+                    'thumb' => 'media/thumb-xls.png',
                     'mime' => 'application/vnd.ms-excel'
                 ],
-                'xlt' => [
+                'xlsx' => [
                     'type' => 'file',
-                    'mime' => 'application/vnd.ms-excel'
-                ],
-                'xlm' => [
-                    'type' => 'file',
-                    'mime' => 'application/vnd.ms-excel'
-                ],
-                'xlsm' => [
-                    'type' => 'file',
-                    'mime' => 'application/vnd.ms-excel'
-                ],
-                'xld' => [
-                    'type' => 'file',
-                    'mime' => 'application/vnd.ms-excel'
-                ],
-                'xla' => [
-                    'type' => 'file',
-                    'mime' => 'application/vnd.ms-excel'
-                ],
-                'xlc' => [
-                    'type' => 'file',
-                    'mime' => 'application/vnd.ms-excel'
-                ],
-                'xlw' => [
-                    'type' => 'file',
-                    'mime' => 'application/vnd.ms-excel'
-                ],
-                'xll' => [
-                    'type' => 'file',
+                    'thumb' => 'media/thumb-xlsx.png',
                     'mime' => 'application/vnd.ms-excel'
                 ],
                 'ppt' => [
                     'type' => 'file',
+                    'thumb' => 'media/thumb-ppt.png',
+                    'mime' => 'application/vnd.ms-powerpoint'
+                ],
+                'pptx' => [
+                    'type' => 'file',
+                    'thumb' => 'media/thumb-pptx.png',
                     'mime' => 'application/vnd.ms-powerpoint'
                 ],
                 'pps' => [
                     'type' => 'file',
+                    'thumb' => 'media/thumb-pps.png',
                     'mime' => 'application/vnd.ms-powerpoint'
                 ],
                 'rtf' => [
                     'type' => 'file',
+                    'thumb' => 'media/thumb-rtf.png',
                     'mime' => 'application/rtf'
                 ],
                 'bmp' => [
                     'type' => 'file',
+                    'thumb' => 'media/thumb-bmp.png',
                     'mime' => 'image/bmp'
                 ],
                 'tiff' => [
                     'type' => 'file',
+                    'thumb' => 'media/thumb-tiff.png',
                     'mime' => 'image/tiff'
                 ],
                 'mpeg' => [
                     'type' => 'file',
+                    'thumb' => 'media/thumb-mpg.png',
                     'mime' => 'video/mpeg'
                 ],
                 'mpg' => [
                     'type' => 'file',
+                    'thumb' => 'media/thumb-mpg.png',
                     'mime' => 'video/mpeg'
                 ],
                 'mpe' => [
                     'type' => 'file',
+                    'thumb' => 'media/thumb-mpe.png',
                     'mime' => 'video/mpeg'
                 ],
                 'avi' => [
                     'type' => 'file',
+                    'thumb' => 'media/thumb-avi.png',
                     'mime' => 'video/msvideo'
                 ],
                 'wmv' => [
                     'type' => 'file',
+                    'thumb' => 'media/thumb-wmv.png',
                     'mime' => 'video/x-ms-wmv'
                 ],
                 'html' => [
@@ -443,10 +443,25 @@ return [
                     'thumb' => 'media/thumb-html.png',
                     'mime' => 'text/html'
                 ],
+                'ics' => [
+                    'type' => 'iCal',
+                    'thumb' => 'media/thumb-ics.png',
+                    'mime' => 'text/calendar'
+                ],
                 'pdf' => [
                     'type' => 'file',
                     'thumb' => 'media/thumb-pdf.png',
                     'mime' => 'application/pdf'
+                ],
+                'ai' => [
+                    'type' => 'file',
+                    'thumb' => 'media/thumb-ai.png',
+                    'mime' => 'image/ai'
+                ],
+                'psd' => [
+                    'type' => 'file',
+                    'thumb' => 'media/thumb-psd.png',
+                    'mime' => 'image/psd'
                 ],
                 'zip' => [
                     'type' => 'file',
@@ -455,7 +470,7 @@ return [
                 ],
                 '7z' => [
                     'type' => 'file',
-                    'thumb' => 'media/thumb-7zip.png',
+                    'thumb' => 'media/thumb-7z.png',
                     'mime' => 'application/x-7z-compressed'
                 ],
                 'gz' => [
@@ -465,6 +480,7 @@ return [
                 ],
                 'tar' => [
                     'type' => 'file',
+                    'thumb' => 'media/thumb-tar.png',
                     'mime' => 'application/x-tar'
                 ],
                 'css' => [
@@ -483,6 +499,45 @@ return [
                     'mime' => 'application/json'
                 ]
             ]
+        ],
+        'security' => [
+            'xss_whitelist' => [
+                0 => 'admin.super'
+            ],
+            'xss_enabled' => [
+                'on_events' => true,
+                'invalid_protocols' => true,
+                'moz_binding' => true,
+                'html_inline_styles' => true,
+                'dangerous_tags' => true
+            ],
+            'xss_dangerous_tags' => [
+                0 => 'applet',
+                1 => 'meta',
+                2 => 'xml',
+                3 => 'blink',
+                4 => 'link',
+                5 => 'style',
+                6 => 'script',
+                7 => 'embed',
+                8 => 'object',
+                9 => 'iframe',
+                10 => 'frame',
+                11 => 'frameset',
+                12 => 'ilayer',
+                13 => 'layer',
+                14 => 'bgsound',
+                15 => 'title',
+                16 => 'base'
+            ],
+            'uploads_dangerous_extensions' => [
+                0 => 'php',
+                1 => 'html',
+                2 => 'htm',
+                3 => 'js',
+                4 => 'exe'
+            ],
+            'salt' => 'AhCed3fzbjB9Q5'
         ],
         'site' => [
             'title' => 'Grav',
@@ -541,7 +596,11 @@ return [
             'wrapped_site' => false,
             'reverse_proxy_setup' => false,
             'force_ssl' => false,
+            'force_lowercase_urls' => true,
             'custom_base_url' => '',
+            'username_regex' => '^[a-z0-9_-]{3,16}$',
+            'pwd_regex' => '(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{8,}',
+            'intl_enabled' => true,
             'languages' => [
                 'supported' => [
                     
@@ -603,11 +662,12 @@ return [
                 ],
                 'append_url_extension' => '',
                 'expires' => 604800,
+                'cache_control' => NULL,
                 'last_modified' => false,
                 'etag' => false,
                 'vary_accept_encoding' => false,
                 'redirect_default_route' => false,
-                'redirect_default_code' => 301,
+                'redirect_default_code' => 302,
                 'redirect_trailing_slash' => true,
                 'ignore_files' => [
                     0 => '.DS_Store'
@@ -633,6 +693,7 @@ return [
                 ],
                 'driver' => 'auto',
                 'prefix' => 'g',
+                'clear_images_by_default' => true,
                 'cli_compatibility' => false,
                 'lifetime' => 604800,
                 'gzip' => false,
@@ -686,16 +747,18 @@ return [
             ],
             'media' => [
                 'enable_media_timestamp' => false,
-                'upload_limit' => 0,
                 'unsupported_inline_types' => [
                     
                 ],
                 'allowed_fallback_types' => [
                     
-                ]
+                ],
+                'auto_metadata_exif' => false,
+                'upload_limit' => 2097152
             ],
             'session' => [
                 'enabled' => true,
+                'initialize' => true,
                 'timeout' => 1800,
                 'name' => 'grav-site',
                 'secure' => false,
@@ -707,11 +770,22 @@ return [
                 'releases' => 'stable',
                 'proxy_url' => NULL,
                 'method' => 'auto',
-                'verify_peer' => true
+                'verify_peer' => true,
+                'official_gpm_only' => true
+            ],
+            'strict_mode' => [
+                'yaml_compat' => true,
+                'twig_compat' => true
             ]
         ],
-        'security' => [
-            'salt' => 'AhCed3fzbjB9Q5'
+        'themes' => [
+            'agency' => [
+                'enabled' => true,
+                'color' => 'blue',
+                'dropdown' => [
+                    'enabled' => false
+                ]
+            ]
         ]
     ]
 ];

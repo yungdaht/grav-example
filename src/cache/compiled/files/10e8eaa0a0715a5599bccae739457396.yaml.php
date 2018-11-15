@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/var/www/grav-admin/system/blueprints/config/system.yaml',
-    'modified' => 1486891478,
+    'modified' => 1542321496,
     'data' => [
         'title' => 'PLUGIN_ADMIN.SYSTEM',
         'form' => [
@@ -15,12 +15,13 @@ return [
                     'fields' => [
                         'home.alias' => [
                             'type' => 'pages',
-                            'size' => 'medium',
+                            'size' => 'large',
                             'classes' => 'fancy',
                             'label' => 'PLUGIN_ADMIN.HOME_PAGE',
                             'show_all' => false,
                             'show_modular' => false,
                             'show_root' => false,
+                            'show_slug' => true,
                             'help' => 'PLUGIN_ADMIN.HOME_PAGE_HELP'
                         ],
                         'home.hide_in_urls' => [
@@ -119,7 +120,7 @@ return [
                         ],
                         'pages.order.by' => [
                             'type' => 'select',
-                            'size' => 'long',
+                            'size' => 'large',
                             'classes' => 'fancy',
                             'label' => 'PLUGIN_ADMIN.DEFAULT_ORDERING',
                             'help' => 'PLUGIN_ADMIN.DEFAULT_ORDERING_HELP',
@@ -185,6 +186,7 @@ return [
                         ],
                         'pages.append_url_extension' => [
                             'type' => 'text',
+                            'size' => 'x-small',
                             'placeholder' => 'e.g. .html',
                             'label' => 'PLUGIN_ADMIN.APPEND_URL_EXT',
                             'help' => 'PLUGIN_ADMIN.APPEND_URL_EXT_HELP'
@@ -438,6 +440,13 @@ return [
                                 'min' => 1
                             ]
                         ],
+                        'pages.cache_control' => [
+                            'type' => 'text',
+                            'size' => 'medium',
+                            'label' => 'PLUGIN_ADMIN.CACHE_CONTROL',
+                            'help' => 'PLUGIN_ADMIN.CACHE_CONTROL_HELP',
+                            'placeholder' => 'e.g. public, max-age=31536000'
+                        ],
                         'pages.last_modified' => [
                             'type' => 'toggle',
                             'label' => 'PLUGIN_ADMIN.LAST_MODIFIED',
@@ -594,6 +603,19 @@ return [
                             'help' => 'PLUGIN_ADMIN.CACHE_PREFIX_HELP',
                             'placeholder' => 'PLUGIN_ADMIN.CACHE_PREFIX_PLACEHOLDER'
                         ],
+                        'cache.clear_images_by_default' => [
+                            'type' => 'toggle',
+                            'label' => 'PLUGIN_ADMIN.CLEAR_IMAGES_BY_DEFAULT',
+                            'help' => 'PLUGIN_ADMIN.CLEAR_IMAGES_BY_DEFAULT_HELP',
+                            'highlight' => 1,
+                            'options' => [
+                                1 => 'PLUGIN_ADMIN.YES',
+                                0 => 'PLUGIN_ADMIN.NO'
+                            ],
+                            'validate' => [
+                                'type' => 'bool'
+                            ]
+                        ],
                         'cache.cli_compatibility' => [
                             'type' => 'toggle',
                             'label' => 'PLUGIN_ADMIN.CLI_COMPATIBILITY',
@@ -691,6 +713,11 @@ return [
                             'label' => 'PLUGIN_ADMIN.REDIS_PORT',
                             'help' => 'PLUGIN_ADMIN.REDIS_PORT_HELP',
                             'placeholder' => '6379'
+                        ],
+                        'cache.redis.password' => [
+                            'type' => 'text',
+                            'size' => 'small',
+                            'label' => 'PLUGIN_ADMIN.REDIS_PASSWORD'
                         ]
                     ]
                 ],
@@ -915,10 +942,13 @@ return [
                             ]
                         ],
                         'assets.collections' => [
-                            'type' => 'array',
+                            'type' => 'multilevel',
                             'label' => 'PLUGIN_ADMIN.COLLECTIONS',
                             'placeholder_key' => 'collection_name',
-                            'placeholder_value' => 'collection_path'
+                            'placeholder_value' => 'collection_path',
+                            'validate' => [
+                                'type' => 'array'
+                            ]
                         ]
                     ]
                 ],
@@ -937,6 +967,9 @@ return [
                                 -1 => 'PLUGIN_ADMIN.ERROR_SYSTEM',
                                 0 => 'PLUGIN_ADMIN.ERROR_SIMPLE',
                                 1 => 'PLUGIN_ADMIN.ERROR_FULL_BACKTRACE'
+                            ],
+                            'validate' => [
+                                'type' => 'int'
                             ]
                         ],
                         'errors.log' => [
@@ -993,13 +1026,11 @@ return [
                     'underline' => true,
                     'fields' => [
                         'images.default_image_quality' => [
-                            'type' => 'text',
+                            'type' => 'range',
                             'append' => '%',
                             'label' => 'PLUGIN_ADMIN.DEFAULT_IMAGE_QUALITY',
                             'help' => 'PLUGIN_ADMIN.DEFAULT_IMAGE_QUALITY_HELP',
-                            'classes' => 'x-small',
                             'validate' => [
-                                'type' => 'number',
                                 'min' => 1,
                                 'max' => 100
                             ]
@@ -1054,20 +1085,23 @@ return [
                                 'type' => 'bool'
                             ]
                         ],
-                        'media.upload_limit' => [
-                            'type' => 'text',
-                            'append' => 'bytes',
-                            'label' => 'PLUGIN_ADMIN.UPLOAD_LIMIT',
-                            'help' => 'PLUGIN_ADMIN.UPLOAD_LIMIT_HELP',
-                            'classes' => 'small',
-                            'validate' => [
-                                'type' => 'number'
-                            ]
-                        ],
                         'media.enable_media_timestamp' => [
                             'type' => 'toggle',
                             'label' => 'PLUGIN_ADMIN.ENABLE_MEDIA_TIMESTAMP',
                             'help' => 'PLUGIN_ADMIN.ENABLE_MEDIA_TIMESTAMP_HELP',
+                            'highlight' => 0,
+                            'options' => [
+                                1 => 'PLUGIN_ADMIN.YES',
+                                0 => 'PLUGIN_ADMIN.NO'
+                            ],
+                            'validate' => [
+                                'type' => 'bool'
+                            ]
+                        ],
+                        'media.auto_metadata_exif' => [
+                            'type' => 'toggle',
+                            'label' => 'PLUGIN_ADMIN.ENABLE_AUTO_METADATA',
+                            'help' => 'PLUGIN_ADMIN.ENABLE_AUTO_METADATA_HELP',
                             'highlight' => 0,
                             'options' => [
                                 1 => 'PLUGIN_ADMIN.YES',
@@ -1118,6 +1152,20 @@ return [
                                 'type' => 'bool'
                             ]
                         ],
+                        'session.initialize' => [
+                            'type' => 'toggle',
+                            'label' => 'PLUGIN_ADMIN.SESSION_INITIALIZE',
+                            'help' => 'PLUGIN_ADMIN.SESSION_INITIALIZE_HELP',
+                            'highlight' => 1,
+                            'options' => [
+                                1 => 'PLUGIN_ADMIN.YES',
+                                0 => 'PLUGIN_ADMIN.NO'
+                            ],
+                            'default' => true,
+                            'validate' => [
+                                'type' => 'bool'
+                            ]
+                        ],
                         'session.timeout' => [
                             'type' => 'text',
                             'size' => 'small',
@@ -1126,7 +1174,7 @@ return [
                             'help' => 'PLUGIN_ADMIN.TIMEOUT_HELP',
                             'validate' => [
                                 'type' => 'number',
-                                'min' => 1
+                                'min' => 0
                             ]
                         ],
                         'session.name' => [
@@ -1218,6 +1266,20 @@ return [
                                 'curl' => 'PLUGIN_ADMIN.CURL'
                             ]
                         ],
+                        'gpm.official_gpm_only' => [
+                            'type' => 'toggle',
+                            'label' => 'PLUGIN_ADMIN.GPM_OFFICIAL_ONLY',
+                            'highlight' => 'auto',
+                            'help' => 'PLUGIN_ADMIN.GPM_OFFICIAL_ONLY_HELP',
+                            'options' => [
+                                1 => 'PLUGIN_ADMIN.YES',
+                                0 => 'PLUGIN_ADMIN.NO'
+                            ],
+                            'default' => true,
+                            'validate' => [
+                                'type' => 'bool'
+                            ]
+                        ],
                         'gpm.verify_peer' => [
                             'type' => 'toggle',
                             'label' => 'PLUGIN_ADMIN.GPM_VERIFY_PEER',
@@ -1236,6 +1298,31 @@ return [
                             'label' => 'PLUGIN_ADMIN.REVERSE_PROXY',
                             'highlight' => 0,
                             'help' => 'PLUGIN_ADMIN.REVERSE_PROXY_HELP',
+                            'options' => [
+                                1 => 'PLUGIN_ADMIN.YES',
+                                0 => 'PLUGIN_ADMIN.NO'
+                            ],
+                            'validate' => [
+                                'type' => 'bool'
+                            ]
+                        ],
+                        'username_regex' => [
+                            'type' => 'text',
+                            'size' => 'large',
+                            'label' => 'PLUGIN_ADMIN.USERNAME_REGEX',
+                            'help' => 'PLUGIN_ADMIN.USERNAME_REGEX_HELP'
+                        ],
+                        'pwd_regex' => [
+                            'type' => 'text',
+                            'size' => 'large',
+                            'label' => 'PLUGIN_ADMIN.PWD_REGEX',
+                            'help' => 'PLUGIN_ADMIN.PWD_REGEX_HELP'
+                        ],
+                        'intl_enabled' => [
+                            'type' => 'toggle',
+                            'label' => 'PLUGIN_ADMIN.INTL_ENABLED',
+                            'highlight' => 1,
+                            'help' => 'PLUGIN_ADMIN.INTL_ENABLED_HELP',
                             'options' => [
                                 1 => 'PLUGIN_ADMIN.YES',
                                 0 => 'PLUGIN_ADMIN.NO'
@@ -1295,12 +1382,54 @@ return [
                                 'type' => 'bool'
                             ]
                         ],
+                        'force_lowercase_urls' => [
+                            'type' => 'toggle',
+                            'label' => 'PLUGIN_ADMIN.FORCE_LOWERCASE_URLS',
+                            'highlight' => 1,
+                            'default' => 1,
+                            'help' => 'PLUGIN_ADMIN.FORCE_LOWERCASE_URLS_HELP',
+                            'options' => [
+                                1 => 'PLUGIN_ADMIN.YES',
+                                0 => 'PLUGIN_ADMIN.NO'
+                            ],
+                            'validate' => [
+                                'type' => 'bool'
+                            ]
+                        ],
                         'custom_base_url' => [
                             'type' => 'text',
                             'size' => 'medium',
                             'placeholder' => 'e.g. http://yoursite.com/yourpath',
                             'label' => 'PLUGIN_ADMIN.CUSTOM_BASE_URL',
                             'help' => 'PLUGIN_ADMIN.CUSTOM_BASE_URL_HELP'
+                        ],
+                        'strict_mode.yaml_compat' => [
+                            'type' => 'toggle',
+                            'label' => 'PLUGIN_ADMIN.STRICT_YAML_COMPAT',
+                            'highlight' => 1,
+                            'default' => 1,
+                            'help' => 'PLUGIN_ADMIN.STRICT_YAML_COMPAT_HELP',
+                            'options' => [
+                                1 => 'PLUGIN_ADMIN.YES',
+                                0 => 'PLUGIN_ADMIN.NO'
+                            ],
+                            'validate' => [
+                                'type' => 'bool'
+                            ]
+                        ],
+                        'strict_mode.twig_compat' => [
+                            'type' => 'toggle',
+                            'label' => 'PLUGIN_ADMIN.STRICT_TWIG_COMPAT',
+                            'highlight' => 1,
+                            'default' => 1,
+                            'help' => 'PLUGIN_ADMIN.STRICT_TWIG_COMPAT_HELP',
+                            'options' => [
+                                1 => 'PLUGIN_ADMIN.YES',
+                                0 => 'PLUGIN_ADMIN.NO'
+                            ],
+                            'validate' => [
+                                'type' => 'bool'
+                            ]
                         ]
                     ]
                 ]

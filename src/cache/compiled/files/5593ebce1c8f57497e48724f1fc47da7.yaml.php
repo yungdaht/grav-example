@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/var/www/grav-admin/system/config/system.yaml',
-    'modified' => 1486891478,
+    'modified' => 1542321495,
     'data' => [
         'absolute_urls' => false,
         'timezone' => '',
@@ -11,7 +11,11 @@ return [
         'wrapped_site' => false,
         'reverse_proxy_setup' => false,
         'force_ssl' => false,
+        'force_lowercase_urls' => true,
         'custom_base_url' => '',
+        'username_regex' => '^[a-z0-9_-]{3,16}$',
+        'pwd_regex' => '(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{8,}',
+        'intl_enabled' => true,
         'languages' => [
             'supported' => [
                 
@@ -28,7 +32,7 @@ return [
             'hide_in_urls' => false
         ],
         'pages' => [
-            'theme' => 'antimatter',
+            'theme' => 'quark',
             'order' => [
                 'by' => 'default',
                 'dir' => 'asc'
@@ -73,11 +77,12 @@ return [
             ],
             'append_url_extension' => '',
             'expires' => 604800,
+            'cache_control' => NULL,
             'last_modified' => false,
             'etag' => false,
             'vary_accept_encoding' => false,
             'redirect_default_route' => false,
-            'redirect_default_code' => 301,
+            'redirect_default_code' => 302,
             'redirect_trailing_slash' => true,
             'ignore_files' => [
                 0 => '.DS_Store'
@@ -103,6 +108,7 @@ return [
             ],
             'driver' => 'auto',
             'prefix' => 'g',
+            'clear_images_by_default' => true,
             'cli_compatibility' => false,
             'lifetime' => 604800,
             'gzip' => false,
@@ -155,16 +161,17 @@ return [
         ],
         'media' => [
             'enable_media_timestamp' => false,
-            'upload_limit' => 0,
             'unsupported_inline_types' => [
                 
             ],
             'allowed_fallback_types' => [
                 
-            ]
+            ],
+            'auto_metadata_exif' => false
         ],
         'session' => [
             'enabled' => true,
+            'initialize' => true,
             'timeout' => 1800,
             'name' => 'grav-site',
             'secure' => false,
@@ -176,7 +183,12 @@ return [
             'releases' => 'stable',
             'proxy_url' => NULL,
             'method' => 'auto',
-            'verify_peer' => true
+            'verify_peer' => true,
+            'official_gpm_only' => true
+        ],
+        'strict_mode' => [
+            'yaml_compat' => true,
+            'twig_compat' => true
         ]
     ]
 ];

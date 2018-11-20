@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/var/www/grav-admin/user/plugins/admin/languages/br.yaml',
-    'modified' => 1486891478,
+    'modified' => 1542666295,
     'data' => [
         'PLUGIN_ADMIN' => [
             'ADMIN_BETA_MSG' => 'Un ermaeziadenn beta an hini eo! Arverit en endro produadur gant evezh...',
@@ -45,7 +45,7 @@ return [
             'EXPERT' => 'Kemplezhoc\'h',
             'EXPAND_ALL' => 'Astenn an holl',
             'COLLAPSE_ALL' => 'Bihanaat an holl',
-            'ERROR' => 'Fzi',
+            'ERROR' => 'Fazi',
             'CLOSE' => 'Serriñ',
             'CANCEL' => 'Nullañ',
             'CONTINUE' => 'Kenderc\'hel',

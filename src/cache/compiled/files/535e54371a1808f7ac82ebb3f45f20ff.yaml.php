@@ -2,10 +2,10 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/var/www/grav-admin/user/themes/antimatter/blueprints.yaml',
-    'modified' => 1486891478,
+    'modified' => 1542666320,
     'data' => [
         'name' => 'Antimatter',
-        'version' => '2.1.0',
+        'version' => '2.1.2',
         'description' => 'Antimatter is the default theme included with **Grav**',
         'icon' => 'empire',
         'author' => [

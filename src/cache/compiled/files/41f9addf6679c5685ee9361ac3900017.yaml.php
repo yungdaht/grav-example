@@ -2,10 +2,10 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/var/www/grav-admin/user/plugins/login/blueprints.yaml',
-    'modified' => 1486891478,
+    'modified' => 1542666312,
     'data' => [
         'name' => 'Login',
-        'version' => '2.2.1',
+        'version' => '2.8.0',
         'description' => 'Enables user authentication and login screen.',
         'icon' => 'sign-in',
         'author' => [
@@ -13,22 +13,22 @@ return [
             'email' => 'devs@getgrav.org',
             'url' => 'http://getgrav.org'
         ],
-        'keywords' => 'admin, plugin, login',
         'homepage' => 'https://github.com/getgrav/grav-plugin-login',
+        'keywords' => 'login, authentication, admin, security',
         'bugs' => 'https://github.com/getgrav/grav-plugin-login/issues',
         'license' => 'MIT',
         'dependencies' => [
             0 => [
                 'name' => 'grav',
-                'version' => '>=1.1.9'
+                'version' => '>=1.4.4'
             ],
             1 => [
                 'name' => 'form',
-                'version' => '~2.0'
+                'version' => '>=2.13.4'
             ],
             2 => [
                 'name' => 'email',
-                'version' => '~2.0'
+                'version' => '>=2.7.0'
             ]
         ],
         'form' => [
@@ -83,12 +83,50 @@ return [
                                     'help' => 'PLUGIN_LOGIN.REDIRECT_AFTER_LOGIN_HELP',
                                     'placeholder' => '/my-page'
                                 ],
+                                'redirect_after_logout' => [
+                                    'type' => 'text',
+                                    'label' => 'PLUGIN_LOGIN.REDIRECT_AFTER_LOGOUT',
+                                    'help' => 'PLUGIN_LOGIN.REDIRECT_AFTER_LOGOUT_HELP',
+                                    'placeholder' => '/'
+                                ],
+                                'route_forgot' => [
+                                    'type' => 'text',
+                                    'size' => 'medium',
+                                    'label' => 'PLUGIN_LOGIN.ROUTE_FORGOT',
+                                    'placeholder' => '/forgot_password'
+                                ],
+                                'route_reset' => [
+                                    'type' => 'text',
+                                    'size' => 'medium',
+                                    'label' => 'PLUGIN_LOGIN.ROUTE_RESET',
+                                    'placeholder' => '/reset_password'
+                                ],
+                                'route_profile' => [
+                                    'type' => 'text',
+                                    'size' => 'medium',
+                                    'label' => 'PLUGIN_LOGIN.ROUTE_PROFILE',
+                                    'placeholder' => '/user_profile'
+                                ],
                                 'parent_acl' => [
                                     'type' => 'toggle',
                                     'label' => 'PLUGIN_LOGIN.USE_PARENT_ACL_LABEL',
                                     'highlight' => 1,
                                     'default' => 0,
                                     'help' => 'PLUGIN_LOGIN.USE_PARENT_ACL_HELP',
+                                    'options' => [
+                                        1 => 'PLUGIN_ADMIN.ENABLED',
+                                        0 => 'PLUGIN_ADMIN.DISABLED'
+                                    ],
+                                    'validate' => [
+                                        'type' => 'bool'
+                                    ]
+                                ],
+                                'dynamic_page_visibility' => [
+                                    'type' => 'toggle',
+                                    'label' => 'PLUGIN_LOGIN.DYNAMIC_VISIBILITY',
+                                    'highlight' => 0,
+                                    'default' => 0,
+                                    'help' => 'PLUGIN_LOGIN.DYNAMIC_VISIBILITY_HELP',
                                     'options' => [
                                         1 => 'PLUGIN_ADMIN.ENABLED',
                                         0 => 'PLUGIN_ADMIN.DISABLED'
@@ -109,6 +147,55 @@ return [
                                     ],
                                     'validate' => [
                                         'type' => 'bool'
+                                    ]
+                                ],
+                                'routes' => [
+                                    'type' => 'section',
+                                    'title' => 'PLUGIN_LOGIN.ROUTES',
+                                    'fields' => [
+                                        'route_activate' => [
+                                            'type' => 'text',
+                                            'size' => 'medium',
+                                            'label' => 'PLUGIN_LOGIN.ROUTE_ACTIVATE',
+                                            'placeholder' => '/activate_user'
+                                        ],
+                                        'route_forgot' => [
+                                            'type' => 'text',
+                                            'size' => 'medium',
+                                            'label' => 'PLUGIN_LOGIN.ROUTE_FORGOT',
+                                            'placeholder' => '/forgot_password'
+                                        ],
+                                        'route_reset' => [
+                                            'type' => 'text',
+                                            'size' => 'medium',
+                                            'label' => 'PLUGIN_LOGIN.ROUTE_RESET',
+                                            'placeholder' => '/reset_password'
+                                        ],
+                                        'route_profile' => [
+                                            'type' => 'text',
+                                            'size' => 'medium',
+                                            'label' => 'PLUGIN_LOGIN.ROUTE_PROFILE',
+                                            'placeholder' => '/user_profile'
+                                        ],
+                                        'route_register' => [
+                                            'type' => 'text',
+                                            'size' => 'medium',
+                                            'label' => 'PLUGIN_LOGIN.ROUTE_REGISTER',
+                                            'help' => 'PLUGIN_LOGIN.ROUTE_REGISTER_HELP',
+                                            'placeholder' => '/register'
+                                        ],
+                                        'user_registration.redirect_after_registration' => [
+                                            'type' => 'text',
+                                            'label' => 'PLUGIN_LOGIN.REDIRECT_AFTER_REGISTRATION',
+                                            'help' => 'PLUGIN_LOGIN.REDIRECT_AFTER_REGISTRATION_HELP',
+                                            'placeholder' => '/page-to-show-after-registration'
+                                        ],
+                                        'user_registration.redirect_after_activation' => [
+                                            'type' => 'text',
+                                            'label' => 'PLUGIN_LOGIN.REDIRECT_AFTER_ACTIVATION',
+                                            'help' => 'PLUGIN_LOGIN.REDIRECT_AFTER_ACTIVATION_HELP',
+                                            'placeholder' => '/page-to-show-after-activation'
+                                        ]
                                     ]
                                 ],
                                 'rememberme' => [
@@ -157,7 +244,7 @@ return [
                                     'type' => 'toggle',
                                     'label' => 'PLUGIN_ADMIN.ENABLED',
                                     'help' => 'PLUGIN_LOGIN.USER_REGISTRATION_ENABLED_HELP',
-                                    'highlight' => 1,
+                                    'highlight' => 0,
                                     'options' => [
                                         1 => 'PLUGIN_ADMIN.YES',
                                         0 => 'PLUGIN_ADMIN.NO'
@@ -165,25 +252,6 @@ return [
                                     'validate' => [
                                         'type' => 'bool'
                                     ]
-                                ],
-                                'route_register' => [
-                                    'type' => 'text',
-                                    'size' => 'medium',
-                                    'label' => 'PLUGIN_LOGIN.ROUTE_REGISTER',
-                                    'help' => 'PLUGIN_LOGIN.ROUTE_REGISTER_HELP',
-                                    'placeholder' => '/register'
-                                ],
-                                'user_registration.redirect_after_registration' => [
-                                    'type' => 'text',
-                                    'label' => 'PLUGIN_LOGIN.REDIRECT_AFTER_REGISTRATION',
-                                    'help' => 'PLUGIN_LOGIN.REDIRECT_AFTER_REGISTRATION_HELP',
-                                    'placeholder' => '/page-to-show-after-registration'
-                                ],
-                                'user_registration.redirect_after_activation' => [
-                                    'type' => 'text',
-                                    'label' => 'PLUGIN_LOGIN.REDIRECT_AFTER_ACTIVATION',
-                                    'help' => 'PLUGIN_LOGIN.REDIRECT_AFTER_ACTIVATION_HELP',
-                                    'placeholder' => '/page-to-show-after-activation'
                                 ],
                                 'registration_fields' => [
                                     'type' => 'section',
@@ -195,7 +263,7 @@ return [
                                             'label' => 'PLUGIN_LOGIN.REGISTRATION_FIELDS',
                                             'help' => 'PLUGIN_LOGIN.REGISTRATION_FIELDS_HELP',
                                             'placeholder_key' => 'PLUGIN_LOGIN.REGISTRATION_FIELD_KEY',
-                                            'placeholder_value' => 'PLUGIN_LOGIN.REGISTRATION_FIELD_VALUE'
+                                            'placeholder_value' => 'PLUGIN_LOGIN.ADDITIONAL_PARAM_VALUE'
                                         ],
                                         'user_registration.default_values' => [
                                             'type' => 'array',
@@ -254,7 +322,7 @@ return [
                                             'type' => 'toggle',
                                             'label' => 'PLUGIN_LOGIN.SET_USER_DISABLED',
                                             'help' => 'PLUGIN_LOGIN.SET_USER_DISABLED_HELP',
-                                            'highlight' => 1,
+                                            'highlight' => 0,
                                             'options' => [
                                                 1 => 'PLUGIN_ADMIN.YES',
                                                 0 => 'PLUGIN_ADMIN.NO'
@@ -267,7 +335,7 @@ return [
                                             'type' => 'toggle',
                                             'label' => 'PLUGIN_LOGIN.LOGIN_AFTER_REGISTRATION',
                                             'help' => 'PLUGIN_LOGIN.LOGIN_AFTER_REGISTRATION_HELP',
-                                            'highlight' => 1,
+                                            'highlight' => 0,
                                             'options' => [
                                                 1 => 'PLUGIN_ADMIN.YES',
                                                 0 => 'PLUGIN_ADMIN.NO'
@@ -280,7 +348,20 @@ return [
                                             'type' => 'toggle',
                                             'label' => 'PLUGIN_LOGIN.SEND_ACTIVATION_EMAIL',
                                             'help' => 'PLUGIN_LOGIN.SEND_ACTIVATION_EMAIL_HELP',
-                                            'highlight' => 1,
+                                            'highlight' => 0,
+                                            'options' => [
+                                                1 => 'PLUGIN_ADMIN.YES',
+                                                0 => 'PLUGIN_ADMIN.NO'
+                                            ],
+                                            'validate' => [
+                                                'type' => 'bool'
+                                            ]
+                                        ],
+                                        'user_registration.options.manually_enable' => [
+                                            'type' => 'toggle',
+                                            'label' => 'PLUGIN_LOGIN.MANUALLY_ENABLE',
+                                            'help' => 'PLUGIN_LOGIN.MANUALLY_ENABLE_HELP',
+                                            'highlight' => 0,
                                             'options' => [
                                                 1 => 'PLUGIN_ADMIN.YES',
                                                 0 => 'PLUGIN_ADMIN.NO'
@@ -293,7 +374,7 @@ return [
                                             'type' => 'toggle',
                                             'label' => 'PLUGIN_LOGIN.SEND_NOTIFICATION_EMAIL',
                                             'help' => 'PLUGIN_LOGIN.SEND_NOTIFICATION_EMAIL_HELP',
-                                            'highlight' => 1,
+                                            'highlight' => 0,
                                             'options' => [
                                                 1 => 'PLUGIN_ADMIN.YES',
                                                 0 => 'PLUGIN_ADMIN.NO'
@@ -306,13 +387,65 @@ return [
                                             'type' => 'toggle',
                                             'label' => 'PLUGIN_LOGIN.SEND_WELCOME_EMAIL',
                                             'help' => 'PLUGIN_LOGIN.SEND_WELCOME_EMAIL_HELP',
-                                            'highlight' => 1,
+                                            'highlight' => 0,
                                             'options' => [
                                                 1 => 'PLUGIN_ADMIN.YES',
                                                 0 => 'PLUGIN_ADMIN.NO'
                                             ],
-                                            'validate' => NULL
+                                            'validate' => [
+                                                'type' => 'bool'
+                                            ]
                                         ]
+                                    ]
+                                ]
+                            ]
+                        ],
+                        'Security' => [
+                            'type' => 'tab',
+                            'title' => 'PLUGIN_LOGIN.SECURITY_TAB',
+                            'fields' => [
+                                'max_pw_resets_count' => [
+                                    'type' => 'number',
+                                    'size' => 'x-small',
+                                    'label' => 'PLUGIN_LOGIN.MAX_RESETS_COUNT',
+                                    'help' => 'PLUGIN_LOGIN.MAX_RESETS_COUNT_HELP',
+                                    'append' => 'PLUGIN_LOGIN.RESETS',
+                                    'validate' => [
+                                        'type' => 'number',
+                                        'min' => 0
+                                    ]
+                                ],
+                                'max_pw_resets_interval' => [
+                                    'type' => 'number',
+                                    'size' => 'x-small',
+                                    'label' => 'PLUGIN_LOGIN.MAX_RESETS_INTERVAL',
+                                    'help' => 'PLUGIN_LOGIN.MAX_RESETS_INTERVAL_HELP',
+                                    'append' => 'PLUGIN_LOGIN.SECONDS',
+                                    'validate' => [
+                                        'type' => 'number',
+                                        'min' => 1
+                                    ]
+                                ],
+                                'max_login_count' => [
+                                    'type' => 'number',
+                                    'size' => 'x-small',
+                                    'label' => 'PLUGIN_LOGIN.MAX_LOGINS_COUNT',
+                                    'help' => 'PLUGIN_LOGIN.MAX_LOGINS_COUNT_HELP',
+                                    'append' => 'PLUGIN_LOGIN.ATTEMPTS',
+                                    'validate' => [
+                                        'type' => 'number',
+                                        'min' => 0
+                                    ]
+                                ],
+                                'max_login_interval' => [
+                                    'type' => 'number',
+                                    'size' => 'x-small',
+                                    'label' => 'PLUGIN_LOGIN.MAX_LOGINS_INTERVAL',
+                                    'help' => 'PLUGIN_LOGIN.MAX_LOGINS_INTERVAL_HELP',
+                                    'append' => 'PLUGIN_LOGIN.SECONDS',
+                                    'validate' => [
+                                        'type' => 'number',
+                                        'min' => 1
                                     ]
                                 ]
                             ]

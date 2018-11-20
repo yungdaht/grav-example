@@ -22,7 +22,7 @@ home:
   alias: /home
   hide_in_urls: false
 pages:
-  theme: antimatter
+  theme: ceevee
   order:
     by: default
     dir: asc

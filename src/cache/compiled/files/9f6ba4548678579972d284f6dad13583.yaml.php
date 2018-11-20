@@ -2,9 +2,11 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/var/www/grav-admin/user/plugins/admin/languages/uk.yaml',
-    'modified' => 1486891478,
+    'modified' => 1542666295,
     'data' => [
         'PLUGIN_ADMIN' => [
+            'ADMIN_BETA_MSG' => 'Це бета-реліз! Використовуйте його на продуктовому сервері на свій страх і ризик...',
+            'ADMIN_REPORT_ISSUE' => 'Виявила проблему? Будь ласка, повідомте про це на GitHub.',
             'LOGIN_BTN' => 'Увійти',
             'LOGIN_BTN_FORGOT' => 'Забув',
             'LOGIN_BTN_RESET' => 'Скинути пароль',

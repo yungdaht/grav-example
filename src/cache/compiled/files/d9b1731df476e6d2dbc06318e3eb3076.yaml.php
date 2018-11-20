@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/var/www/grav-admin/user/plugins/admin/languages/sk.yaml',
-    'modified' => 1486891478,
+    'modified' => 1542666295,
     'data' => [
         'PLUGIN_ADMIN' => [
             'ADMIN_BETA_MSG' => 'Toto je Beta verzia! Používajte v ostrej prevádzke na vlastné riziko...',
@@ -35,10 +35,13 @@ return [
             'THEMES' => 'Šablóny',
             'LOGOUT' => 'Odhlásiť sa',
             'BACK' => 'Späť',
+            'NEXT' => 'Ďalej',
+            'PREVIOUS' => 'Späť',
             'ADD_PAGE' => 'Pridať stránku',
             'ADD_MODULAR' => 'Pridať modul',
             'MOVE' => 'Presunúť',
             'DELETE' => 'Odstrániť',
+            'VIEW' => 'Náhľad',
             'SAVE' => 'Uložiť',
             'NORMAL' => 'Normálna',
             'EXPERT' => 'Expert',
@@ -172,6 +175,7 @@ return [
             'FULL_NAME' => 'Celé meno',
             'USERNAME' => 'Meno používateľa',
             'EMAIL' => 'E-mail',
+            'USERNAME_EMAIL' => 'Používateľské meno alebo email',
             'PASSWORD' => 'Heslo',
             'PASSWORD_CONFIRM' => 'Potvrdenie hesla',
             'TITLE' => 'Názov',
@@ -185,6 +189,7 @@ return [
             'SITE_TITLE' => 'Nadpis stránky',
             'SITE_TITLE_PLACEHOLDER' => 'Celý názov stránky',
             'SITE_TITLE_HELP' => 'Predvolený názov pre vaše stránky, často používaný v šablónach',
+            'SITE_DEFAULT_LANG' => 'Predvolený jazyk',
             'DEFAULT_AUTHOR' => 'Predvolený autor',
             'DEFAULT_AUTHOR_HELP' => 'Predvolené meno autora, často používajú šablóny alebo obsah stránky',
             'DEFAULT_EMAIL' => 'Predvolený e-mail',

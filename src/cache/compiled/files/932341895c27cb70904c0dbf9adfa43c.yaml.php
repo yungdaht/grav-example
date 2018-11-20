@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/var/www/grav-admin/user/plugins/admin/languages/fi.yaml',
-    'modified' => 1486891478,
+    'modified' => 1542666295,
     'data' => [
         'PLUGIN_ADMIN' => [
             'ADMIN_BETA_MSG' => 'Tämä on beta-versio! Käyttö tuotannossa omalla vastuulla...',
@@ -161,6 +161,7 @@ return [
             'FILE_DELETED' => 'Tiedosto poistettu',
             'FILE_COULD_NOT_BE_DELETED' => 'Tiedostoa ei voitu poistaa',
             'FILE_NOT_FOUND' => 'Tiedostoa ei löytynyt',
+            'GRAV_WAS_SUCCESSFULLY_UPDATED_TO' => 'Grav päivitettiin onnistuneesti versioon',
             'GRAV_UPDATE_FAILED' => 'Grav: n päivitys epäonnistui',
             'EVERYTHING_UPDATED' => 'Kaikki päivitetty',
             'UPDATES_FAILED' => 'Päivitykset epäonnistuivat',
@@ -169,6 +170,7 @@ return [
             'FULL_NAME' => 'Koko nimi',
             'USERNAME' => 'Käyttäjätunnus',
             'EMAIL' => 'Sähköpostiosoite',
+            'USERNAME_EMAIL' => 'Käyttäjänimi tai sähköposti',
             'PASSWORD' => 'Salasana',
             'PASSWORD_CONFIRM' => 'Toista salasana',
             'TITLE' => 'Otsikko',
@@ -188,7 +190,27 @@ return [
             'METADATA' => 'Metadata',
             'NAME' => 'Nimi',
             'CONTENT' => 'Sisältö',
-            'PUBLISHED' => 'Julkaistu'
+            'OPTIONS' => 'Asetukset',
+            'PUBLISHED' => 'Julkaistu',
+            'FOLDER_NAME' => 'Kansion Nimi',
+            'MENU' => 'Valikkko',
+            'LANGUAGES' => 'Kielet',
+            'SESSION' => 'Istunto',
+            'TIMEOUT' => 'Aikakatkaisu',
+            'IS_NOW_AVAILABLE' => 'on nyt saatavilla',
+            'UPDATE_GRAV_NOW' => 'Päivitä Grav nyt',
+            'SAVE_AS' => 'Tallenna nimellä',
+            'UPDATE_AVAILABLE' => 'Päivitys saatavilla',
+            'FULLY_UPDATED' => 'Täysin päivitetty',
+            'IGNORE_HIDDEN' => 'Ohita piilotetut',
+            'ADD_FOLDER' => 'Lisää kansio',
+            'FILE_UNSUPPORTED' => 'Tiedostotyyppiä ei tueta',
+            'LOADING' => 'Lataa..',
+            'UPDATING' => 'Päivitetään',
+            'IMAGE' => 'Kuva',
+            'ALL' => 'Kaikki',
+            'DROPZONE_INVALID_FILE_TYPE' => 'Tämäntyyppisiä tiedostoja ei voi ladata.',
+            'DROPZONE_REMOVE_FILE' => 'Poista tiedosto'
         ]
     ]
 ];

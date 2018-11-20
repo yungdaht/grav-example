@@ -2,10 +2,10 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/var/www/grav-admin/user/plugins/form/blueprints.yaml',
-    'modified' => 1486891478,
+    'modified' => 1542666310,
     'data' => [
         'name' => 'Form',
-        'version' => '2.1.0',
+        'version' => '2.16.3',
         'description' => 'Enables the forms handling',
         'icon' => 'check-square',
         'author' => [
@@ -20,7 +20,7 @@ return [
         'dependencies' => [
             0 => [
                 'name' => 'grav',
-                'version' => '>=1.1.16'
+                'version' => '>=1.5.1'
             ]
         ],
         'form' => [
@@ -55,6 +55,61 @@ return [
                             'validate' => [
                                 'type' => 'bool'
                             ]
+                        ],
+                        'inline_css' => [
+                            'type' => 'toggle',
+                            'label' => 'PLUGIN_FORM.USE_INLINE_CSS',
+                            'highlight' => 1,
+                            'default' => 1,
+                            'options' => [
+                                1 => 'Enabled',
+                                0 => 'Disabled'
+                            ],
+                            'validate' => [
+                                'type' => 'bool'
+                            ]
+                        ],
+                        'refresh_prevention' => [
+                            'type' => 'toggle',
+                            'label' => 'PLUGIN_FORM.REFRESH_PREVENTION',
+                            'help' => 'PLUGIN_FORM.REFRESH_PREVENTION_HELP',
+                            'highlight' => 1,
+                            'default' => 0,
+                            'options' => [
+                                1 => 'Enabled',
+                                0 => 'Disabled'
+                            ],
+                            'validate' => [
+                                'type' => 'bool'
+                            ]
+                        ],
+                        'client_side_validation' => [
+                            'type' => 'toggle',
+                            'label' => 'PLUGIN_FORM.CLIENT_SIDE_VALIDATION',
+                            'help' => 'PLUGIN_FORM.CLIENT_SIDE_VALIDATION_HELP',
+                            'highlight' => 1,
+                            'default' => 1,
+                            'options' => [
+                                1 => 'Enabled',
+                                0 => 'Disabled'
+                            ],
+                            'validate' => [
+                                'type' => 'bool'
+                            ]
+                        ],
+                        'inline_errors' => [
+                            'type' => 'toggle',
+                            'label' => 'PLUGIN_FORM.INLINE_ERRORS',
+                            'help' => 'PLUGIN_FORM.INLINE_ERRORS_HELP',
+                            'highlight' => 0,
+                            'default' => 0,
+                            'options' => [
+                                1 => 'Enabled',
+                                0 => 'Disabled'
+                            ],
+                            'validate' => [
+                                'type' => 'bool'
+                            ]
                         ]
                     ]
                 ],
@@ -76,8 +131,20 @@ return [
                                 'type' => 'bool'
                             ]
                         ],
+                        'files.limit' => [
+                            'type' => 'text',
+                            'size' => 'x-small',
+                            'label' => 'PLUGIN_FORM.LIMIT',
+                            'help' => 'PLUGIN_FORM.LIMIT_HELP',
+                            'default' => 10,
+                            'validate' => [
+                                'type' => 'number',
+                                'min' => 1
+                            ]
+                        ],
                         'files.destination' => [
                             'type' => 'text',
+                            'size' => 'large',
                             'label' => 'PLUGIN_FORM.DESTINATION',
                             'help' => 'PLUGIN_FORM.DESTINATION_HELP',
                             'default' => '@self'
@@ -93,6 +160,45 @@ return [
                             ],
                             'validate' => [
                                 'type' => 'commalist'
+                            ]
+                        ],
+                        'files.filesize' => [
+                            'type' => 'text',
+                            'label' => 'PLUGIN_FORM.FILESIZE',
+                            'help' => 'PLUGIN_FORM.FILESIZE_HELP',
+                            'size' => 'x-small',
+                            'default' => 5,
+                            'validate' => [
+                                'type' => 'number',
+                                'min' => 0
+                            ]
+                        ],
+                        'files.avoid_overwriting' => [
+                            'type' => 'toggle',
+                            'label' => 'PLUGIN_FORM.AVOID_OVERWRITING',
+                            'help' => 'PLUGIN_FORM.AVOID_OVERWRITING_HELP',
+                            'highlight' => 0,
+                            'default' => 0,
+                            'options' => [
+                                1 => 'PLUGIN_ADMIN.ENABLED',
+                                0 => 'PLUGIN_ADMIN.DISABLED'
+                            ],
+                            'validate' => [
+                                'type' => 'bool'
+                            ]
+                        ],
+                        'files.random_name' => [
+                            'type' => 'toggle',
+                            'label' => 'PLUGIN_FORM.RANDOM_NAME',
+                            'help' => 'PLUGIN_FORM.RANDOM_NAME_HELP',
+                            'highlight' => 0,
+                            'default' => 0,
+                            'options' => [
+                                1 => 'PLUGIN_ADMIN.ENABLED',
+                                0 => 'PLUGIN_ADMIN.DISABLED'
+                            ],
+                            'validate' => [
+                                'type' => 'bool'
                             ]
                         ]
                     ]

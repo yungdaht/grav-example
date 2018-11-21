@@ -1,8 +1,8 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledConfig',
-    'timestamp' => 1542666332,
-    'checksum' => 'c4a7291dc92c539a503d52fea8f15828',
+    'timestamp' => 1542819670,
+    'checksum' => '27ac771b84a2084482dc409261f7be49',
     'files' => [
         'user/config' => [
             'media' => [
@@ -15,7 +15,7 @@ return [
             ],
             'site' => [
                 'file' => 'user/config/site.yaml',
-                'modified' => 1486891478
+                'modified' => 1542736582
             ],
             'streams' => [
                 'file' => 'user/config/streams.yaml',
@@ -23,7 +23,7 @@ return [
             ],
             'system' => [
                 'file' => 'user/config/system.yaml',
-                'modified' => 1542666323
+                'modified' => 1542819666
             ],
             'themes/agency' => [
                 'file' => 'user/config/themes/agency.yaml',
@@ -55,11 +55,19 @@ return [
         'user/plugins' => [
             'plugins/admin' => [
                 'file' => 'user/plugins/admin/admin.yaml',
-                'modified' => 1542666295
+                'modified' => 1542726015
+            ],
+            'plugins/breadcrumbs' => [
+                'file' => 'user/plugins/breadcrumbs/breadcrumbs.yaml',
+                'modified' => 1542752986
+            ],
+            'plugins/devtools' => [
+                'file' => 'user/plugins/devtools/devtools.yaml',
+                'modified' => 1542727712
             ],
             'plugins/email' => [
                 'file' => 'user/plugins/email/email.yaml',
-                'modified' => 1542666305
+                'modified' => 1542726016
             ],
             'plugins/error' => [
                 'file' => 'user/plugins/error/error.yaml',
@@ -67,11 +75,11 @@ return [
             ],
             'plugins/form' => [
                 'file' => 'user/plugins/form/form.yaml',
-                'modified' => 1542666310
+                'modified' => 1542726016
             ],
             'plugins/login' => [
                 'file' => 'user/plugins/login/login.yaml',
-                'modified' => 1542666312
+                'modified' => 1542726016
             ],
             'plugins/markdown-notices' => [
                 'file' => 'user/plugins/markdown-notices/markdown-notices.yaml',
@@ -143,6 +151,19 @@ return [
                         'visitors' => 20
                     ]
                 ]
+            ],
+            'breadcrumbs' => [
+                'enabled' => true,
+                'show_all' => true,
+                'built_in_css' => true,
+                'include_home' => true,
+                'include_current' => true,
+                'icon_home' => '',
+                'icon_divider_classes' => 'fa fa-angle-right',
+                'link_trailing' => false
+            ],
+            'devtools' => [
+                'enabled' => true
             ],
             'email' => [
                 'enabled' => true,
@@ -567,7 +588,7 @@ return [
             'salt' => 'AhCed3fzbjB9Q5'
         ],
         'site' => [
-            'title' => 'Grav',
+            'title' => 'Custom-Cave',
             'default_lang' => 'en',
             'author' => [
                 'name' => 'Joe Bloggs',
@@ -644,7 +665,7 @@ return [
                 'hide_in_urls' => false
             ],
             'pages' => [
-                'theme' => 'ceevee',
+                'theme' => 'custom-cave',
                 'order' => [
                     'by' => 'default',
                     'dir' => 'asc'
@@ -759,7 +780,7 @@ return [
                 'log' => true
             ],
             'debugger' => [
-                'enabled' => false,
+                'enabled' => true,
                 'shutdown' => [
                     'close_connection' => true
                 ],

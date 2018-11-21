@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/var/www/grav-admin/user/config/system.yaml',
-    'modified' => 1542666323,
+    'modified' => 1542819666,
     'data' => [
         'absolute_urls' => false,
         'timezone' => '',
@@ -32,7 +32,7 @@ return [
             'hide_in_urls' => false
         ],
         'pages' => [
-            'theme' => 'ceevee',
+            'theme' => 'custom-cave',
             'order' => [
                 'by' => 'default',
                 'dir' => 'asc'
@@ -147,7 +147,7 @@ return [
             'log' => true
         ],
         'debugger' => [
-            'enabled' => false,
+            'enabled' => true,
             'shutdown' => [
                 'close_connection' => true
             ],

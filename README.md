@@ -1,3 +1,3 @@
 # EXAMPLE PROJECT
 
-I'm just playing around with Grav and trying some.  
+I'm just playing around with Grav and trying some things.

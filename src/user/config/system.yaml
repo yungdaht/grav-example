@@ -22,7 +22,7 @@ home:
   alias: /home
   hide_in_urls: false
 pages:
-  theme: ceevee
+  theme: custom-cave
   order:
     by: default
     dir: asc
@@ -117,7 +117,7 @@ errors:
   display: true
   log: true
 debugger:
-  enabled: false
+  enabled: true
   shutdown:
     close_connection: true
   twig: true

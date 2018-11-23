@@ -1,8 +1,8 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
-    'filename' => '/var/www/grav-admin/user/plugins/breadcrumbs/breadcrumbs.yaml',
-    'modified' => 1542819726,
+    'filename' => '/var/www/grav-admin/user/config/plugins/breadcrumbs.yaml',
+    'modified' => 1542829243,
     'data' => [
         'enabled' => true,
         'show_all' => true,
@@ -11,6 +11,6 @@ return [
         'include_current' => true,
         'icon_home' => '',
         'icon_divider_classes' => 'fa fa-angle-right',
-        'link_trailing' => false
+        'link_trailing' => true
     ]
 ];

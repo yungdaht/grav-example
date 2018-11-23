@@ -2,4 +2,4 @@
 title: Lions
 ---
 
-I live with two Leos.  Lions are intense.
+The Detroit lions suck.

@@ -52,17 +52,17 @@ class __TwigTemplate_ca570a8b6e2835291b99a7c5f0dff7d852000e3474ff42e4556c6d51a61
 ";
         // line 49
         $this->displayBlock('body', $context, $blocks);
-        // line 52
+        // line 55
         echo "
 ";
-        // line 53
+        // line 56
         $this->displayBlock('footer', $context, $blocks);
-        // line 60
+        // line 63
         echo "
 ";
-        // line 61
-        $this->displayBlock('bottom', $context, $blocks);
         // line 64
+        $this->displayBlock('bottom', $context, $blocks);
+        // line 67
         echo "
 </body>
 </html>
@@ -187,6 +187,15 @@ class __TwigTemplate_ca570a8b6e2835291b99a7c5f0dff7d852000e3474ff42e4556c6d51a61
     {
         // line 50
         echo "    ";
+        if ($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["config"]) ? $context["config"] : null), "plugins", array()), "breadcrumbs", array()), "enabled", array())) {
+            // line 51
+            echo "        ";
+            $this->loadTemplate("partials/breadcrumbs.html.twig", "partials/base.html.twig", 51)->display($context);
+            // line 52
+            echo "    ";
+        }
+        // line 53
+        echo "    ";
         $this->displayBlock('content', $context, $blocks);
     }
 
@@ -194,10 +203,10 @@ class __TwigTemplate_ca570a8b6e2835291b99a7c5f0dff7d852000e3474ff42e4556c6d51a61
     {
     }
 
-    // line 53
+    // line 56
     public function block_footer($context, array $blocks = array())
     {
-        // line 54
+        // line 57
         echo "    <div class=\"footer text-center\">
         <div class=\"wrapper padding\">
             <p>Testing out custom templates.  This is the footer</p>
@@ -206,10 +215,10 @@ class __TwigTemplate_ca570a8b6e2835291b99a7c5f0dff7d852000e3474ff42e4556c6d51a61
 ";
     }
 
-    // line 61
+    // line 64
     public function block_bottom($context, array $blocks = array())
     {
-        // line 62
+        // line 65
         echo "    ";
         echo $this->getAttribute((isset($context["assets"]) ? $context["assets"] : null), "js", array(0 => "bottom"), "method");
         echo "
@@ -228,7 +237,7 @@ class __TwigTemplate_ca570a8b6e2835291b99a7c5f0dff7d852000e3474ff42e4556c6d51a61
 
     public function getDebugInfo()
     {
-        return array (  213 => 62,  210 => 61,  201 => 54,  198 => 53,  189 => 50,  186 => 49,  181 => 43,  179 => 42,  176 => 41,  173 => 40,  167 => 45,  165 => 40,  160 => 38,  155 => 36,  151 => 34,  148 => 33,  144 => 26,  141 => 25,  138 => 24,  134 => 21,  131 => 20,  128 => 19,  125 => 18,  122 => 17,  114 => 27,  112 => 24,  106 => 22,  104 => 17,  99 => 15,  95 => 14,  92 => 13,  90 => 12,  79 => 8,  76 => 7,  73 => 6,  66 => 64,  64 => 61,  61 => 60,  59 => 53,  56 => 52,  54 => 49,  51 => 48,  49 => 33,  45 => 32,  41 => 30,  39 => 6,  33 => 3,  30 => 2,  28 => 1,);
+        return array (  222 => 65,  219 => 64,  210 => 57,  207 => 56,  198 => 53,  195 => 52,  192 => 51,  189 => 50,  186 => 49,  181 => 43,  179 => 42,  176 => 41,  173 => 40,  167 => 45,  165 => 40,  160 => 38,  155 => 36,  151 => 34,  148 => 33,  144 => 26,  141 => 25,  138 => 24,  134 => 21,  131 => 20,  128 => 19,  125 => 18,  122 => 17,  114 => 27,  112 => 24,  106 => 22,  104 => 17,  99 => 15,  95 => 14,  92 => 13,  90 => 12,  79 => 8,  76 => 7,  73 => 6,  66 => 67,  64 => 64,  61 => 63,  59 => 56,  56 => 55,  54 => 49,  51 => 48,  49 => 33,  45 => 32,  41 => 30,  39 => 6,  33 => 3,  30 => 2,  28 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -290,6 +299,9 @@ class __TwigTemplate_ca570a8b6e2835291b99a7c5f0dff7d852000e3474ff42e4556c6d51a61
 {% endblock %}
 
 {% block body %}
+    {% if config.plugins.breadcrumbs.enabled %}
+        {% include 'partials/breadcrumbs.html.twig' %}
+    {% endif %}
     {% block content %}{% endblock %}
 {% endblock %}
 

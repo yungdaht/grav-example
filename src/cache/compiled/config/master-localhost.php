@@ -1,13 +1,21 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledConfig',
-    'timestamp' => 1542819670,
-    'checksum' => '27ac771b84a2084482dc409261f7be49',
+    'timestamp' => 1542830523,
+    'checksum' => '23c0c4229f94a4484b93f56d9308a68f',
     'files' => [
         'user/config' => [
             'media' => [
                 'file' => 'user/config/media.yaml',
                 'modified' => 1542316682
+            ],
+            'plugins/breadcrumbs' => [
+                'file' => 'user/config/plugins/breadcrumbs.yaml',
+                'modified' => 1542829243
+            ],
+            'plugins/login' => [
+                'file' => 'user/config/plugins/login.yaml',
+                'modified' => 1542830369
             ],
             'security' => [
                 'file' => 'user/config/security.yaml',
@@ -15,7 +23,7 @@ return [
             ],
             'site' => [
                 'file' => 'user/config/site.yaml',
-                'modified' => 1542736582
+                'modified' => 1542819726
             ],
             'streams' => [
                 'file' => 'user/config/streams.yaml',
@@ -23,7 +31,7 @@ return [
             ],
             'system' => [
                 'file' => 'user/config/system.yaml',
-                'modified' => 1542819666
+                'modified' => 1542830520
             ],
             'themes/agency' => [
                 'file' => 'user/config/themes/agency.yaml',
@@ -59,11 +67,11 @@ return [
             ],
             'plugins/breadcrumbs' => [
                 'file' => 'user/plugins/breadcrumbs/breadcrumbs.yaml',
-                'modified' => 1542752986
+                'modified' => 1542819726
             ],
             'plugins/devtools' => [
                 'file' => 'user/plugins/devtools/devtools.yaml',
-                'modified' => 1542727712
+                'modified' => 1542819726
             ],
             'plugins/email' => [
                 'file' => 'user/plugins/email/email.yaml',
@@ -79,7 +87,7 @@ return [
             ],
             'plugins/login' => [
                 'file' => 'user/plugins/login/login.yaml',
-                'modified' => 1542726016
+                'modified' => 1542822719
             ],
             'plugins/markdown-notices' => [
                 'file' => 'user/plugins/markdown-notices/markdown-notices.yaml',
@@ -160,7 +168,7 @@ return [
                 'include_current' => true,
                 'icon_home' => '',
                 'icon_divider_classes' => 'fa fa-angle-right',
-                'link_trailing' => false
+                'link_trailing' => true
             ],
             'devtools' => [
                 'enabled' => true
@@ -215,9 +223,9 @@ return [
             'login' => [
                 'enabled' => true,
                 'built_in_css' => true,
-                'route' => NULL,
+                'route' => '/',
                 'redirect_to_login' => true,
-                'redirect_after_login' => NULL,
+                'redirect_after_login' => '/private-content',
                 'redirect_after_logout' => '/',
                 'route_activate' => '/activate_user',
                 'route_forgot' => '/forgot_password',

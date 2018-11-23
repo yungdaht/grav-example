@@ -1,14 +1,14 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
-    'filename' => '/var/www/grav-admin/user/plugins/login/login.yaml',
-    'modified' => 1542822719,
+    'filename' => '/var/www/grav-admin/user/config/plugins/login.yaml',
+    'modified' => 1542830369,
     'data' => [
         'enabled' => true,
         'built_in_css' => true,
-        'route' => NULL,
+        'route' => '/',
         'redirect_to_login' => true,
-        'redirect_after_login' => NULL,
+        'redirect_after_login' => '/private-content',
         'redirect_after_logout' => '/',
         'route_activate' => '/activate_user',
         'route_forgot' => '/forgot_password',
@@ -46,7 +46,6 @@ return [
                     'login' => 'true'
                 ]
             ],
-            'redirect_after_registration' => '',
             'options' => [
                 'validate_password1_and_password2' => true,
                 'set_user_disabled' => false,

@@ -1,9 +1,9 @@
 enabled: true
 built_in_css: true
-route: /
+route: /user-login
 redirect_to_login: true
 redirect_after_login: /private-content
-redirect_after_logout: /
+redirect_after_logout: /logout-page
 route_activate: /activate_user
 route_forgot: /forgot_password
 route_reset: /reset_password
@@ -22,7 +22,7 @@ max_pw_resets_interval: 60
 max_login_count: 0
 max_login_interval: 2
 user_registration:
-  enabled: false
+  enabled: true
   fields:
     - username
     - password
@@ -36,9 +36,9 @@ user_registration:
     site:
       login: 'true'
   options:
-    validate_password1_and_password2: true
+    validate_password1_and_password2: false
     set_user_disabled: false
-    login_after_registration: false
+    login_after_registration: true
     send_activation_email: false
     manually_enable: false
     send_notification_email: false

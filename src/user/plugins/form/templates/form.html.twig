@@ -2,7 +2,9 @@
 
 {% block content %}
 
-    {{ content|raw }}
-    {% include "forms/form.html.twig" %}
+    <div class="wrapper">
+        {{ content|raw }}
+        {% include "forms/form.html.twig" %}
+    </div>
 
 {% endblock %}

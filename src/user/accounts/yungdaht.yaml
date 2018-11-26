@@ -1,7 +1,10 @@
 email: cave.shaun@gmail.com
-fullname: Yungdaht
+fullname: Yung
 level: Newbie
 state: enabled
 access:
+  admin:
+    login: true
+    super: true
   site:
-    login: 'true'
+    login: true

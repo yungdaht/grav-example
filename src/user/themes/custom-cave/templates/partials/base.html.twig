@@ -51,8 +51,16 @@
         {% include 'partials/breadcrumbs.html.twig' %}
     {% endif %}
 
+    {% if config.plugins.login.enabled and grav.user.username %}
+        <div class="wrapper" style="float:right">
+            <i class="fa fa-lock"></i> {% include 'partials/login-status.html.twig' %}
+        </div>
+    {% endif %}
+
     {% block messages %}
-        {% include 'partials/messages.html.twig' ignore missing %}
+        <div class="wrapper">
+            {% include 'partials/messages.html.twig' ignore missing %}
+        </div>
     {% endblock %}
 
     {% block content %}{% endblock %}

@@ -17,9 +17,9 @@ rememberme:
   enabled: true
   timeout: 604800
   name: grav-rememberme
-max_pw_resets_count: 0
+max_pw_resets_count: 1000
 max_pw_resets_interval: 60
-max_login_count: 0
+max_login_count: 1000
 max_login_interval: 2
 user_registration:
   enabled: true

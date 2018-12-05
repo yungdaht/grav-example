@@ -5,7 +5,7 @@ author:
   name: John Appleseed                      # Default author name
   email: 'john@example.com'                 # Default author email
 
-taxonomies: [category,tag]                  # Arbitrary list of taxonomy types
+taxonomies: [category,tag, cat, bear]                  # Arbitrary list of taxonomy types
 
 metadata:
   description: 'My Grav Site'               # Site description

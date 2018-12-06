@@ -1,0 +1,31 @@
+name: Custom Form Thanks
+version: 0.1.0
+description: handler for custom form
+icon: plug
+author:
+  name: Shaun Cave
+  email: shaun.cave@usbank.com
+homepage: https://github.com/shaun-cave/grav-plugin-custom-form-thanks
+demo: http://demo.yoursite.com
+keywords: grav, plugin, etc
+bugs: https://github.com/shaun-cave/grav-plugin-custom-form-thanks/issues
+docs: https://github.com/shaun-cave/grav-plugin-custom-form-thanks/blob/develop/README.md
+license: MIT
+
+form:
+  validation: strict
+  fields:
+    enabled:
+      type: toggle
+      label: PLUGIN_ADMIN.PLUGIN_STATUS
+      highlight: 1
+      default: 0
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+    text_var:
+      type: text
+      label: PLUGIN_CUSTOM_FORM_THANKS.TEXT_VARIABLE
+      help: PLUGIN_CUSTOM_FORM_THANKS.TEXT_VARIABLE_HELP

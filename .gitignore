@@ -1,4 +1,5 @@
-*/node_modules/*
-*/vendor/*
+*/node_modules/
+*/vendor/
 src/cache/
-src/logs/*
+src/logs/
+src/user/plugins/page-toc/vendor/

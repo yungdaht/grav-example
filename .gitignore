@@ -3,3 +3,5 @@
 src/cache/
 src/logs/
 src/user/plugins/page-toc/vendor/
+src/user/plugins/admin-addon-user-manager/vendor/
+src/user/themes/custom-cave/node_modules/

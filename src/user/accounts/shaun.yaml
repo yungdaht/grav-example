@@ -4,9 +4,12 @@ title: Administrator
 state: enabled
 access:
   admin:
-    login: true
-    super: true
+    super: 'true'
+    login: 'true'
   site:
-    login: true
+    login: 'true'
 hashed_password: $2y$10$ddsaTxphE6.2Pi/3.CNp8OO5v5SjQRMr84IrJ5mzZU5O8APzBOSe2
 reset: 'bd9a68731aff374b587c3c41e8a95363::1543610208'
+language: en
+twofa_enabled: true
+twofa_secret: GW4TTH2HLHS5JIEKOCKH3NR7ULYMJLQH

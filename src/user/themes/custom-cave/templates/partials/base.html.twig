@@ -22,7 +22,9 @@
     {{ assets.css() }}
 
     {% block javascripts %}
-        {% do assets.addJs('jquery', 100) %}
+        {% do assets.addJs('theme://node_modules/jquery/dist/jquery.min.js', 100) %}
+        {% do assets.addJs('theme://node_modules/underscore/underscore-min.js', 100) %}
+        {% do assets.addJs('theme://js/main.js', 100) %}
     {% endblock %}
     {{ assets.js() }}
 

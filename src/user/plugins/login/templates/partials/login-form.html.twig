@@ -54,7 +54,8 @@
                     <button class="{{ form_button_classes ?: 'button primary' }}" type="submit"  name="task" value="login.login"><i class="fa fa-sign-in"></i> {{ 'PLUGIN_LOGIN.BTN_LOGIN'|t }}</button>
                 </div>
 
-                <div><a href="/user_register/">New Users Click Here</a>
+                <div><a href="/user_register/">New Users Click Here</a></div>
+                <div><a href="/twitter-login">Click here to login via Twitter</a></div>
 
                 {{ nonce_field('login-form', 'login-form-nonce')|raw }}
             </form>

@@ -12,14 +12,14 @@ use function GuzzleHttp\json_decode;
 class TwitterSigninPlugin extends Plugin
 {
     //get auth tokens
-    private $timestamp = '1545332583';
-    private $nonce = 'X8krVQDohWc';
-    private $oauthSignature = 'mvX3HHojOxOIzm5hEE2OYcoNLlA%3D';
+    private $timestamp = '1545667254';
+    private $nonce = 'EdruewXqd1X';
+    private $oauthSignature = 'r%2Fk9tyCSzhhWKM6C1tdtOXlVxos%3D';
 
     // get user details
-    private $userDetailsTimestamp = '1545332805';
-    private $userDetailNonce = 'NXydbzcCJUt';
-    private $userDetailsOauthSignature = '4Otw9ZQSduwcqDM25p6gUJmFZ38%3D';
+    private $userDetailsTimestamp = '1545667866';
+    private $userDetailNonce = 'SwMVt0OTLeo';
+    private $userDetailsOauthSignature = 'JGsp0rWVqoOYDxOu9Q8iNjnyBfM%3D';
 
     // get access token
     private $accessTokenTimestamp = '1545169194';

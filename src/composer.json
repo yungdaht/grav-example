@@ -36,7 +36,8 @@
         "league/climate": "^3.2",
         "antoligy/dom-string-iterators": "^1.0",
         "miljar/php-exif": "^0.6.3",
-        "composer/ca-bundle": "^1.0"
+        "composer/ca-bundle": "^1.0",
+        "guzzlehttp/oauth-subscriber": "^0.3.0"
     },
     "require-dev": {
         "codeception/codeception": "^2.1",
@@ -51,9 +52,10 @@
     },
     "repositories": [
         {
-            "type": "vcs",
-            "url": "https://github.com/trilbymedia/PHP-Markdown-Documentation-Generator"
-        }
+             "type": "composer",
+             "url": "https://packagist.org"
+        },
+        { "packagist": false }
     ],
     "autoload": {
         "psr-4": {

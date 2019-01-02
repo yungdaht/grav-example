@@ -4,6 +4,9 @@ namespace Grav\Plugin;
 use Grav\Common\Plugin;
 use RocketTheme\Toolbox\Event\Event;
 use function GuzzleHttp\json_decode;
+use Abraham\TwitterOAuth\TwitterOAuth;
+
+require "/var/www/grav-admin/vendor/twitteroauth/autoload.php";
 
 /**
  * Class TwitterSigninPlugin
@@ -131,7 +134,7 @@ class TwitterSigninPlugin extends Plugin
         die();
     }
 
-    private function authenticateUser() {
+    private function authorizeUser() {
         $authServerTokens = $this->getAuthServerTokens();
         $authenticationToken = $this->getAuthenticationToken($authServerTokens);
         $userRedirect = $this->redirectUser($authenticationToken);
@@ -268,10 +271,21 @@ class TwitterSigninPlugin extends Plugin
       $this->e['page']->setRawContent($updatedText . "\n\n" . $content);
     }
 
-    private function userAuthenticated() {
+    private function userAuthorized() {
         $this->serverAccessTokens = $this->getAccessToken();
 
         $this->setAccessTokens();
+
+        $connection = new TwitterOAuth($this->consumerKey, $this->consumerSecret, $this->userToken, $this->accessSecret);
+        // $connection = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET, $access_token, $access_token_secret);
+        $content = $connection->get("account/verify_credentials");
+
+        echo '<pre>';
+        print_r($content);
+        echo "\r\n";
+        echo '</pre>';
+        exit;
+
         $this->appendContent();
     }
 
@@ -285,10 +299,32 @@ class TwitterSigninPlugin extends Plugin
     {
         $this->e = $e;
 
+        $connection = new TwitterOAuth($this->consumerKey, $this->consumerSecret, $this->accessKey, $this->accessSecret);
+        $content = $connection->get("account/verify_credentials");
+        // $connection = new TwitterOAuth($this->consumerKey, $this->consumerSecret, $this->accessKey, $this->accessSecret);
+        // // $connection = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET, $access_token, $access_token_secret);
+        // $content = $connection->get("account/verify_credentials");
+
+        // echo '<pre>';
+        // print_r($content);
+        // echo "\r\n";
+        // echo '</pre>';
+        // exit;
+
+        // $access_token = $connection->oauth("oauth/access_token", ["oauth_verifier" => "nMznkpFRTMCuNMsmALzel9FgPlmWQDWg"]);
+        echo '<pre>';
+        // print_r($connection);
+        print_r($content);
+        // print_r($access_token);
+        echo "\r\n";
+        echo '</pre>';
+        exit;
+
+
         if (isset($_GET['oauth_token'])) {
-            $this->userAuthenticated();
+            $this->userAuthorized();
         } else {
-            $this->authenticateUser();
+            $this->authorizeUser();
         }
     }
 }
